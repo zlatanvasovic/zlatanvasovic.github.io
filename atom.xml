@@ -11,8 +11,8 @@ layout: nil
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://{{ site.domain }}/</id>
   <author>
-    <name>@ZDroid</name>
-    <email>zdroid@zdroidblog.info</email>
+    <name>Zlatan Vasović</name>
+    <email>legospace9876@gmail.com</email>
   </author>
 
   {% for post in site.posts %}

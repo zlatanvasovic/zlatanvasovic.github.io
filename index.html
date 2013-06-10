@@ -6,9 +6,9 @@ layout: default
   {% unless post.draft %}
     <article itemscope itemtype="http://schema.org/BlogPosting">
       <h1>
-        <a href="{{ page.date | date: '%Y-%m-%d' }}" itemprop="name headline">{{ post.title }}</a>
+        <a href="{{ post.url }}" itemprop="name headline">{{ post.title }}</a>
       </h1>
-      <time datetime="{{ post.date | }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time><br />
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time><br />
       <a href="https://twitter.com/share" class="twitter-share-button" data-via="ZXeDroid" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br />
       <section itemprop="articleBody text">
         {{ post.content }}
