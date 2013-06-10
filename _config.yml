@@ -1,0 +1,7 @@
+title: ZDroid
+domain: zdroid.github.io
+
+exclude: ['./assets/less', 'Makefile']
+
+paginate: 5
+pygments: true

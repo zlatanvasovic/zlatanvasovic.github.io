@@ -1,0 +1,86 @@
+//
+// Typography
+//
+
+// Links
+a {
+	color: darken(@base-color, 10%);
+	text-decoration: none;
+
+	&:hover {
+	  text-decoration: underline;
+	}
+}
+
+// Formatting
+strong, b {
+	font-weight: bold;
+}
+
+em, i	{
+	font-style: italic;
+}
+
+small	{
+	font-size: smaller;
+}
+
+sup, sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	position: relative;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+// Quotes
+blockquote {
+  color: #999;
+  margin: 0;
+	padding-left: 10px;
+	border-left: 5px solid #dcdcdc;
+}
+
+// Marking
+mark {
+	background: @sucess;
+	color: #fff;
+	padding: 2px 5px;
+	border-radius: 3px;
+}
+
+// Headings
+h1, h2, h3 {
+	font-weight: bold;
+	line-height: 1.1;	
+}
+
+h1 {font-size: 28px;}
+
+h2 {font-size: 24px;}
+
+h3 {font-size: 20px;}
+
+// Lists
+ul						{list-style: inside circle;}
+
+.square-list	{list-style: inside square;}
+
+.disc-list		{list-style: inside disc;}
+
+ol						{list-style: inside decimal;}
+
+// Horizontal line
+hr {
+  border: 0;
+	background: #dcdcdc;
+	height: 1px;
+}
