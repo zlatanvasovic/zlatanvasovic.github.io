@@ -263,8 +263,11 @@ ol {
 }
 hr {
   border: 0;
-  background: #dcdcdc;
+  background: #f0f0f0;
   height: 1px;
+}
+.divide {
+  background: #ccc;
 }
 code,
 kbd,

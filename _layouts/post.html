@@ -7,7 +7,7 @@ layout: default
     <a href="{{ page.url }}" itemprop="name headline">{{ page.title }}</a>
   </h1>
   <time datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</time><br />
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="ZXeDroid" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br />
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://zdroid.github.io/{{ page.url }}" data-via="ZXeDroid" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br />
   <section itemprop="articleBody text">
     {{ content }}
   </section>
