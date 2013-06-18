@@ -184,6 +184,7 @@ body {
   background: #fff;
   font: 17px/1.5 "Ubuntu Light", Arial, sans-serif;
   color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
 }
 @media only screen and (max-width: 767px) {
   body {
@@ -199,6 +200,7 @@ a:hover {
 }
 strong,
 b {
+  font-family: Ubuntu, Arial, sans-serif;
   font-weight: bold;
 }
 em,
@@ -249,19 +251,8 @@ h2 {
 h3 {
   font-size: 20px;
 }
-ul {
-  list-style: inside circle;
-}
-.square-list {
-  list-style: inside square;
-}
-.disc-list {
-  list-style: inside disc;
-}
-ol {
-  list-style: inside decimal;
-}
 hr {
+  margin: 50px 0;
   border: 0;
   background: #f0f0f0;
   height: 1px;
