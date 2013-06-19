@@ -30,16 +30,16 @@ var http = require('http'), // http server
 
 fs.readFile('./serve.html', function (err, html) {
 
-	if (err) {
+  if (err) {
     res.writeHead(500);
     return res.end('Error loading index.html');
-	}
+  }
 
-	http.createServer(function(request, response) {
+  http.createServer(function(request, response) {
     response.writeHeader(200, {"Content-Type": "text/html"});
     response.write(html);
     response.end();
-	}).listen(5555, '127.0.0.1');
+  }).listen(5555, '127.0.0.1');
 
 });
 
@@ -59,15 +59,15 @@ console.log('\n' + white + '[HTTP] ' + reset + 'Server running ' + blue + '@ ' +
     <meta charset=utf-8 />
     <title>serve.js</title>
     <style>
-	    h1 {
-		    text-align: center;
-		    color: #666;
-		    font: 70px "Droid Sans", Arial, sans-serif
-	    }
-	  </style>
+      h1 {
+        text-align: center;
+        color: #666;
+        font: 70px "Droid Sans", Arial, sans-serif
+      }
+    </style>
   </head>
   <body>
-	  <h1>serve.js</h1>
+    <h1>serve.js</h1>
   </body>
 </html>
 {% endhighlight %}

@@ -9,7 +9,7 @@ HR=\033[37m--------------------------------------------------\033[39m
 
 build:
 	@printf "\nCompiling and minifying LESS..."
-	@lessc ${LESS} ${CSS}
+	@recess --compile ${LESS} > ${CSS}
 	@echo "             ${CHECK}"
 	@echo "${HR}"
 	@echo "\033[36mCompile is complete!\n\033[39m"
