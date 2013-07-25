@@ -19,58 +19,7 @@ You will not have a problem with **npm**, it comes with node.
 
 So, once when you install node, you can run a test server.
 
-I will use serving of HTML5 page with colored console log as example.
-
-<code><b>serve.js</b></code>
-{% highlight javascript %}
-#!/usr/bin/env node
-
-var http = require('http'), // http server
-    fs = require('fs');     // file system module
-
-fs.readFile('./serve.html', function (err, html) {
-
-  if (err) {
-    res.writeHead(500);
-    return res.end('Error loading index.html');
-  }
-
-  http.createServer(function(request, response) {
-    response.writeHeader(200, {"Content-Type": "text/html"});
-    response.write(html);
-    response.end();
-  }).listen(5555, '127.0.0.1');
-
-});
-
-// Write a run message...
-var white = '\033[1;37m'
-    blue  = '\033[1;34m';
-    reset = '\033[0m';
-
-console.log('\n' + white + '[HTTP] ' + reset + 'Server running ' + blue + '@ ' + reset + 'http://localhost:5555' + reset + '\n')
-{% endhighlight %}
-
-<code><b>serve.html</b></code>
-{% highlight html %}
-<!doctype html>
-<html lang=en>
-  <head>
-    <meta charset=utf-8 />
-    <title>serve.js</title>
-    <style>
-      h1 {
-        text-align: center;
-        color: #666;
-        font: 70px "Droid Sans", Arial, sans-serif
-      }
-    </style>
-  </head>
-  <body>
-    <h1>serve.js</h1>
-  </body>
-</html>
-{% endhighlight %}
+I will use serving of HTML5 page with colored console log as example. Find the code on <https://gist.github.com/ZDroid/d235063f07d0fd1dbeb1>.
 
 Just run `node serve.js` and visit your server at <http://localhost:5555> (or <http://127.0.0.1:5555>). **:)**
 

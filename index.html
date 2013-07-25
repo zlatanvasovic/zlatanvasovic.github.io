@@ -8,28 +8,28 @@ layout: default
       <h1>
         <a href="{{ post.url }}" itemprop="name headline">{{ post.title }}</a>
       </h1>
-      <time datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time><br />
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://zdroid.github.io/{{ post.url }}" data-via="ZXeDroid" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br />
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time><br>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://zdroid.github.io/{{ post.url }}" data-via="ZXeDroid" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br>
       <section itemprop="articleBody text">
         {{ post.content }}
       </section>
-      <meta itemprop="author" content="Zlatan Vasović" />
-      <meta itemprop="url" content="http://{{ site.domain }}{{ post.url }}" />
+      <meta itemprop="author" content="Zlatan Vasović">
+      <meta itemprop="url" content="http://{{ site.domain }}{{ post.url }}">
     </article>
-		<hr class="divide" />
-	{% endunless %}
+    <hr class="divider">
+  {% endunless %}
 {% endfor %}
 
 <div class="pagination">
-	{% if paginator.previous_page %}
-		<a href="/page{{paginator.previous_page}}" class="previous">Older</a>
-	{% else %}
-		<span class="previous">Older</span>
-	{% endif %}
-	 &middot; 
-	{% if paginator.next_page %}
-		<a href="/page{{paginator.next_page}}" class="next">Newer</a>
-	{% else %}
-		<span class="next">Newer</span>
-	{% endif %}
+  {% if paginator.previous_page %}
+    <a href="/page{{paginator.previous_page}}">Older</a>
+  {% else %}
+    Older
+  {% endif %}
+    &middot; 
+  {% if paginator.next_page %}
+    <a href="/page{{paginator.next_page}}">Newer</a>
+  {% else %}
+    Newer
+  {% endif %}
 </div>

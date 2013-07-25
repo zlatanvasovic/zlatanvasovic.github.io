@@ -1,12 +1,11 @@
-# humanstxt.org/
+# humanstxt.org
 # The humans responsible & technology colophon
 
 # AUTHOR
 
-	Zlatan Vasović -- @ZXeDroid
+  Zlatan Vasović -- @ZXeDroid
 
 # TECHOLOGIES
 
-	HTML5, LESS
-	XML, Jekyll
-	Normalize, Font Awesome
+  HTML5, LESS
+  Jekyll, Normalize

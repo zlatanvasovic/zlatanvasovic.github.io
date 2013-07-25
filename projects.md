@@ -1,16 +1,12 @@
 ---
+title: Projects
 layout: default
 ---
 
 # Projects
 
-## [nginZ](https://github.com/ZDroid/nginZ)
-
-Powerful web framework. Contains LESS styles, Font Awesome and PHP functions. Its design is flat.
-
-## [zdsh](https://github.com/ZDroid/zdsh)
-
-*Just* a code collection.
+* [**nginZ**](https://github.com/ZDroid/nginZ) - powerful web framework
+* [**zdsh**](https://github.com/ZDroid/zdsh) - *just* a code collection
 
 ----
 
