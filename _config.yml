@@ -1,8 +1,0 @@
-title: ZDroid
-domain: zdroid.github.io
-description: Personal site of your designer & programer, Zlatan Vasović
-
-exclude: ['less', 'Makefile']
-
-paginate: 5
-pygments: true

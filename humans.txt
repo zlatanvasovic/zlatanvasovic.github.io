@@ -7,5 +7,4 @@
 
 # TECHOLOGIES
 
-  HTML5, LESS
-  Jekyll, Normalize
+  HTML5, CSS3
