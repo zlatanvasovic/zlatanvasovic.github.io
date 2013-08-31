@@ -43,6 +43,10 @@ body {
   text-align: center;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .social img {
   border: 2px solid #f6f6f6;
   border-radius: 100%;
