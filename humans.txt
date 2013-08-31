@@ -3,7 +3,7 @@
 
 # AUTHOR
 
-  Zlatan Vasović -- @ZXeDroid
+  Zlatan Vasović -- @zdr0id
 
 # TECHOLOGIES
 

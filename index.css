@@ -21,7 +21,7 @@ body {
   margin-left: auto;
 }
 
-.logo {
+.card > a img {
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -29,7 +29,7 @@ body {
   border-radius: 100%;
 }
 
-.logo:hover {
+.card > a img:hover {
   border: 2px solid lightblue;
 }
 
