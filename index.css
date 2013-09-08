@@ -8,50 +8,34 @@
 */
 
 body {
-  padding: 5%;
-  font-family: sans-serif;
-  font-size: 40px;
-  color: #555;
+  padding: 3%;
+  font: 40px sans-serif;
+  color: #666;
   background-color: #fff;
 }
 
+a {text-decoration: none !important;}
+
 .card {
   width: 90%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .card > a img {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
-  border: 2px solid #f6f6f6;
+  margin: 0 auto;
+}
+
+img {
+  border: 2px solid transparent;
   border-radius: 100%;
 }
 
-.card > a img:hover {
-  border: 2px solid lightblue;
-}
+img:hover {border: 2px solid lightblue;}
 
-.name {
-  padding-top: 20px;
-  padding-bottom: 20px;
+p {
+  margin: 0;
   text-align: center;
 }
 
-.social {
-  text-align: center;
-}
-
-a {
-  text-decoration: none !important;
-}
-
-.social img {
-  border: 2px solid #f6f6f6;
-  border-radius: 100%;
-}
-
-.social img:hover {
-  border: 2px solid lightblue;
-}
+p:not(:last-child) {margin: 20px 0;}
