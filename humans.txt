@@ -1,6 +1,3 @@
-# humanstxt.org
-# The humans responsible & technology colophon
-
 # AUTHOR
 
   Zlatan Vasović -- @zdr0id
