@@ -1,6 +1,6 @@
 # AUTHOR
 
-  Zlatan Vasović -- @zdr0id
+  Zlatan Vasović -- robot -- @zdr0id
 
 # TECHOLOGIES
 

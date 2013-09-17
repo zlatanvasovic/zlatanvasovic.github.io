@@ -1,14 +1,5 @@
-/*!
-
-         |          o    |
-,---,,---|,---.,---..,---|
- .-' |   ||    |   |||   |
-'---'`---'`    `---'``---'
-
-*/
-
 body {
-  padding: 3%;
+  padding: 2%;
   font: 40px sans-serif;
   color: #666;
   background-color: #fff;
@@ -17,7 +8,7 @@ body {
 a {text-decoration: none !important;}
 
 .card {
-  width: 90%;
+  max-width: 96%;
   margin: 0 auto;
 }
 
