@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} &middot; {{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="Zlatan Vasović">
+    <meta name="keywords" content="zdroid, github, design, programming">
+    <meta name="robots" content="noodp,noydir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="page-header"><h1>{{ site.title }}</h1></div>
+          <p><a href="/">
+            <img class="img-thumbnail" src="/zd.png" width="150" height="150" alt="ZDroid">
+          </a></p>
+          <p>{{ site.description }}</p>
+          <div class="btn-group-vertical">
+            <a class="btn btn-default" href="/projects.html"><i class="icon-rocket"></i> Projects</a>
+            <a class="btn btn-default" href="/links.html"><i class="icon-link"></i> Links</a>
+            <a class="btn btn-default" href="https://twitter.com/zdr0id"><i class="icon-twitter"></i> Twitter</a>
+            <a class="btn btn-default" href="https://github.com/ZDroid"><i class="icon-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="page-header"><h1>{{ page.title }}</h1></div>
+          <p class="lead">{{ page.lead }}</p>
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
