@@ -447,10 +447,6 @@ pre {
   background-color: #f5f5f5;
   border: 1px solid #cccccc;
 }
-.pre-scrollable {
-  max-height: 350px;
-  overflow-y: scroll;
-}
 .container {
   margin-right: auto;
   margin-left: auto;
