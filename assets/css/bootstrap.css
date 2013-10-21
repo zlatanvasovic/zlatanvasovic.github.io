@@ -486,8 +486,8 @@ pre {
 .col-10 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .col-1,
 .col-2,
@@ -559,11 +559,11 @@ table tfoot > tr > td {
   padding: 8px;
   line-height: 1.428571429;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 table thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #ddd;
 }
 table caption + thead tr th,
 table colgroup + thead tr th,
@@ -571,7 +571,7 @@ table thead:first-child tr th {
   border-top: 0;
 }
 table tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #ddd;
 }
 .table-sm thead > tr > th,
 .table-sm tbody > tr > th,
@@ -582,12 +582,12 @@ table tbody + tbody {
   padding: 5px;
 }
 .table-border {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 .table-border > thead > tr > th,
 .table-border > tbody > tr > td,
 .table-border > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 .table-border > thead > tr > th {
   border-bottom-width: 2px;
@@ -637,7 +637,7 @@ table > tfoot > tr.active > td {
 .btn-default {
   color: #333;
   background-color: #fff;
-  border-color: #cccccc;
+  border-color: #ccc;
 }
 .btn-default:hover,
 .btn-default:focus,
