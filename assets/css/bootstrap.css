@@ -419,7 +419,7 @@ blockquote small {
   color: #999;
 }
 blockquote small:before {
-  content: '\2014 \00A0';
+  content: "\2014 \00A0";
 }
 blockquote:before,
 blockquote:after {
@@ -985,9 +985,12 @@ a.thumbnail:focus {
   visibility: hidden;
 }
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('../font/fontawesome-webfont.eot?v=3.2.1');
-  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  font-family: "FontAwesome";
+  src: url("../font/fontawesome-webfont.eot?v=3.2.1");
+  src: url("../font/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"),
+       url("../font/fontawesome-webfont.woff?v=3.2.1") format("woff"),
+       url("../font/fontawesome-webfont.ttf?v=3.2.1") format("truetype"),
+       url("../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1013,12 +1016,12 @@ a [class*="icon-"] {
 }
 [class*="icon-"].icon-mono {
   display: inline-block;
-  width: 1.1428571428571428em;
+  width: 1.14em;
   text-align: right;
-  padding-right: 0.2857142857142857em;
+  padding-right: 0.3em;
 }
 [class*="icon-"].icon-mono.icon-lg {
-  width: 1.4285714285714286em;
+  width: 1.43em;
 }
 .icons-ul {
   margin-left: 0;
@@ -1029,22 +1032,19 @@ a [class*="icon-"] {
 }
 .icons-ul [class*="icon-"] {
   position: absolute;
-  left: -2.142857142857143em;
-  width: 2.142857142857143em;
+  left: -2.14em;
+  width: 2.14em;
   text-align: center;
   line-height: inherit;
 }
-.icon-muted {
-  color: #eeeeee;
-}
 .icon-light {
-  color: #ffffff;
+  color: #fff;
 }
 .icon-dark {
-  color: #333333;
+  color: #333;
 }
 .icon-border {
-  border: solid 1px #eeeeee;
+  border: solid 1px #eee;
   padding: .2em .25em .15em;
   border-radius: 3px;
 }
