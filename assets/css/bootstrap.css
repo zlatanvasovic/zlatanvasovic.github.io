@@ -1014,15 +1014,6 @@ a [class*="icon-"] {
   display: inline;
   text-decoration: none !important;
 }
-[class*="icon-"].icon-mono {
-  display: inline-block;
-  width: 1.14em;
-  text-align: right;
-  padding-right: 0.3em;
-}
-[class*="icon-"].icon-mono.icon-lg {
-  width: 1.43em;
-}
 .icons-ul {
   margin-left: 0;
   list-style: none;
@@ -1037,44 +1028,20 @@ a [class*="icon-"] {
   text-align: center;
   line-height: inherit;
 }
-.icon-light {
+.icon-white {
   color: #fff;
-}
-.icon-dark {
-  color: #333;
-}
-.icon-border {
-  border: solid 1px #eee;
-  padding: .2em .25em .15em;
-  border-radius: 3px;
 }
 .icon-2x {
   font-size: 2em;
 }
-.icon-2x.icon-border {
-  border-width: 2px;
-  border-radius: 4px;
-}
 .icon-3x {
   font-size: 3em;
-}
-.icon-3x.icon-border {
-  border-width: 3px;
-  border-radius: 5px;
 }
 .icon-4x {
   font-size: 4em;
 }
-.icon-4x.icon-border {
-  border-width: 4px;
-  border-radius: 6px;
-}
 .icon-5x {
   font-size: 5em;
-}
-.icon-5x.icon-border {
-  border-width: 5px;
-  border-radius: 7px;
 }
 [class*="icon-"] {
   display: inline;
@@ -1086,9 +1053,6 @@ a [class*="icon-"] {
   background-position: 0% 0%;
   background-repeat: repeat;
   margin-top: 0;
-}
-.icon-white {
-  background-image: none;
 }
 .btn [class*="icon-"].icon-lg {
   line-height: .9em;
