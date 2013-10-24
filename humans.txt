@@ -2,7 +2,6 @@
 
   Zlatan Vasović -- @zdr0id
 
-# TECHOLOGIES
+# TECHNOLOGIES
 
   HTML5, CSS3
-  Jekyll
