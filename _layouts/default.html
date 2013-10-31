@@ -5,7 +5,7 @@
     <title>{% if page.title == "Home" %}{{ site.title }}
       {% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="Zlatan Vasović">
+    <meta name="author" content="{{ site.author }}">
     <meta name="keywords" content="zdroid, github, design, programming">
     <meta name="robots" content="noodp,noydir">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,10 +21,18 @@
           </a></p>
           <p>{{ site.description }}</p>
           <div class="btn-group-vertical">
-            <a class="btn btn-default" href="/projects.html"><i class="fa fa-rocket"></i> Projects</a>
-            <a class="btn btn-default" href="/links.html"><i class="fa fa-link"></i> Links</a>
-            <a class="btn btn-default" href="https://twitter.com/zdr0id"><i class="fa fa-twitter"></i> Twitter</a>
-            <a class="btn btn-default" href="https://github.com/ZDroid"><i class="fa fa-github"></i> GitHub</a>
+            <a class="btn btn-default" href="/projects.html">
+              <i class="fa fa-rocket"></i> Projects
+            </a>
+            <a class="btn btn-default" href="/links.html">
+              <i class="fa fa-link"></i> Links
+            </a>
+            <a class="btn btn-default" href="https://twitter.com/{{ site.twitter }}">
+              <i class="fa fa-twitter"></i> Twitter
+            </a>
+            <a class="btn btn-default" href="https://github.com/{{ site.github }}">
+              <i class="fa fa-github"></i> GitHub
+            </a>
           </div>
         </div>
         <div class="col-7">
