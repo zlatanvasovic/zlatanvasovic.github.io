@@ -1,10 +1,16 @@
 # Meta data
 
-title: ZDroid
-author: Zlatan Vasović
-description: Personal site of your designer and programer, Zlatan Vasović.
+title:        ZDroid
+author:       Zlatan Vasović
+description:  Personal site of your designer and programer, Zlatan Vasović.
 
-# Social nicknames
+# Permalinks
 
-twitter: zdr0id
-github: ZDroid
+permalink:    pretty
+
+# Social networks and links
+
+blog:         http://zdroid.roon.io
+twitter:      zdr0id
+github:       ZDroid
+instagram:    zdr0id
