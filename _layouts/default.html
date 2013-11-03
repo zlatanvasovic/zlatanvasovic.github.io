@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% if page.title == "Home" %}{{ site.title }}
-      {% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
+    <title>{% if page.slug == "home" %}{{ site.title }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.author }}">
     <meta name="keywords" content="zdroid, github, design, programming">
@@ -14,28 +13,36 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-md-3">
           <div class="page-header"><h1>{{ site.title }}</h1></div>
           <p><a href="/">
-            <img class="img-thumbnail" src="/zd.png" width="150" height="150" alt="ZDroid">
+            <img class="thumbnail" src="/zd.png" width="150" height="150" alt="ZDroid">
           </a></p>
           <p>{{ site.description }}</p>
-          <div class="btn-group-vertical">
-            <a class="btn btn-default" href="/projects">
-              <i class="fa fa-rocket"></i> Projects
-            </a>
-            <a class="btn btn-default" href="/links">
-              <i class="fa fa-link"></i> Links
-            </a>
-            <a class="btn btn-default" href="https://twitter.com/{{ site.twitter }}">
-              <i class="fa fa-twitter"></i> Twitter
-            </a>
-            <a class="btn btn-default" href="https://github.com/{{ site.github }}">
-              <i class="fa fa-github"></i> GitHub
-            </a>
-          </div>
+          <ul class="nav nav-pills nav-stacked">
+            <li{% if page.slug == "projects" %} class="active"{% endif %}>
+              <a href="/projects">
+                <i class="fa fa-rocket pull-right"></i> Projects
+              </a>
+            </li>
+            <li{% if page.slug == "links" %} class="active"{% endif %}>
+              <a href="/links">
+                <i class="fa fa-link pull-right"></i> Links
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/{{ site.twitter }}">
+                <i class="fa fa-twitter pull-right"></i> Twitter
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/{{ site.github }}">
+                <i class="fa fa-github pull-right"></i> GitHub
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="col-7">
+        <div class="col-md-7">
           <div class="page-header"><h1>{{ page.title }}</h1></div>
           <p class="lead">{{ page.lead }}</p>
           {{ content }}
