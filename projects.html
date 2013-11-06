@@ -5,63 +5,17 @@ slug: projects
 lead: I write code and design things.
 ---
 
-<div class="panel panel-default">
+{% for project in site.data.projects %}
+<div class="panel panel-{{ project.state }}">
   <div class="panel-heading">
-    Pulsir
-    <i class="fa fa-file-text pull-right"></i>
+    {{ project.name }}
+    <i class="fa fa-{{ project.icon }} pull-right"></i>
   </div>
   <div class="panel-body">
-    <p>Blogs, reinvented.</p>
+    <p>{{ project.description }}</p>
     <p>
-      <a class="btn btn-default" href="https://github.com/pulsir/pulsir">Source</a>
+      <a class="btn btn-{{ project.state }}" href="https://github.com/{{ project.source }}">Source</a>
     </p>
   </div>
 </div>
-<div class="panel panel-warning">
-  <div class="panel-heading">
-    Mistype
-    <i class="fa fa-font pull-right"></i>
-  </div>
-  <div class="panel-body">
-    <p>Simple CSS framework. Grid. Type. Utility.</p>
-    <p>
-      <a class="btn btn-warning" href="https://github.com/ZDroid/mistype">Source</a>
-    </p>
-  </div>
-</div>
-<div class="panel panel-info">
-  <div class="panel-heading">
-    Restilizr
-    <i class="fa fa-pencil pull-right"></i>
-  </div>
-  <div class="panel-body">
-    <p>Google Chrome extension for quick adding custom CSS styles</p>
-    <p>
-      <a class="btn btn-info" href="https://github.com/ZDroid/restilizr">Source</a>
-    </p>
-  </div>
-</div>
-<div class="panel panel-success">
-  <div class="panel-heading">
-    Droid
-    <i class="fa fa-android pull-right"></i>
-  </div>
-  <div class="panel-body">
-    <p>Droid drawn 100% in CSS</p>
-    <p>
-      <a class="btn btn-success" href="https://github.com/ZDroid/droid">Source</a>
-    </p>
-  </div>
-</div>
-<div class="panel panel-danger">
-  <div class="panel-heading">
-    Dotfiles
-    <i class="fa fa-code-fork pull-right"></i>
-  </div>
-  <div class="panel-body">
-    <p>My dotfiles</p>
-    <p>
-      <a class="btn btn-danger" href="https://github.com/ZDroid/dotfiles">Source</a>
-    </p>
-  </div>
-</div>
+{% endfor %}

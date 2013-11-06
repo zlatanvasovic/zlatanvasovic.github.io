@@ -1,0 +1,35 @@
+- name: Pulsir
+  description: Blogs, reinvented.
+  source: pulsir/pulsir
+  state: default
+  icon: file-text
+
+- name: Hackwork
+  description: Simple PHP framework for making HTML5 sites
+  source: ZDroid/hackwork
+  state: primary
+  icon: code
+
+- name: Droid
+  description: Droid drawn 100% in CSS
+  source: ZDroid/droid
+  state: success
+  icon: android
+
+- name: Restilizr
+  description: Chrome extension for quick adding custom CSS styles
+  source: ZDroid/restilizr
+  state: info
+  icon: pencil
+
+- name: Mistype
+  description: Simple CSS framework. Grid. Type. Utility.
+  source: ZDroid/mistype
+  state: warning
+  icon: font
+
+- name: Dotfiles
+  description: My dotfiles
+  source: ZDroid/dotfiles
+  state: danger
+  icon: code-fork

@@ -1,0 +1,99 @@
+social:
+  - name: Twitter
+    url: https://twitter.com
+    star: y
+
+  - name: GitHub
+    url: https://github.com
+    star: y
+
+  - name: Geeklist
+    url: https://geekli.st
+    star: n
+
+  - name: Google+
+    url: https://plus.google.com
+    star: n
+
+  - name: Facebook
+    url: https://facebook.com
+    star: n
+
+news:
+  - name: The Verge
+    url: http://theverge.com
+    star: y
+
+  - name: ReadWrite
+    url: http://readwrite.com
+    star: y
+
+  - name: Technology Review
+    url: http://technologyreview.com
+    star: n
+
+  - name: OMG! Ubuntu
+    url: http://omgubuntu.co.uk
+    star: n
+
+  - name: OMG! Chrome
+    url: http://omgchrome.com
+    star: n
+
+  - name: Daring Fireball
+    url: http://daringfireball.net
+    star: n
+
+services:
+  - name: Roon
+    url: http://roon.io
+    star: y
+
+  - name: Gmail
+    url: https://gmail.com
+    star: y
+
+  - name: Ghost
+    url: http://ghost.org
+    star: n
+
+  - name: Drive
+    url: https://drive.google.com
+    star: n
+
+  - name: Keep
+    url: https://drive.google.com/keep
+    star: n
+
+  - name: YouTube
+    url: https://youtube.com
+    star: n
+
+  - name: Anapnea
+    url: http://anapnea.net
+    star: n
+
+  - name: Respiratio
+    url: https://respiratio.net
+    star: n
+
+oss:
+  - name: Bootstrap
+    url: http://getbootstrap.com
+    star: y
+
+  - name: Ratchet
+    url: http://maker.github.io/ratchet
+    star: y
+
+  - name: Brightness Controller
+    url: http://lordamit.github.io/Brightness
+    star: y
+
+  - name: RethinkDB
+    url: http://rethinkdb.com
+    star: n
+
+  - name: Hub
+    url: https://hub.github.com
+    star: n

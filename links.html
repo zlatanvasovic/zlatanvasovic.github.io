@@ -7,115 +7,39 @@ lead: I need to keep cool links.
 
 <h2 id="social">Social Networks</h2>
 <ul class="fa-ul">
+{% for link in site.data.links.social %}
   <li>
-    <i class="fa fa-bookmark"></i>
-    <b><a href="https://twitter.com">Twitter</a></b>
+    <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>
+    {% if link.star == "y" %}<b>{% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% if link.star == "y" %}</b>{% endif %}
   </li>
-  <li>
-    <i class="fa fa-bookmark"></i>
-    <b><a href="https://github.com">GitHub</a></b>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="https://geekli.st">Geeklist</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="https://plus.google.com">Google+</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="https://facebook.com">Facebook</a> (I don't like it)
-  </li>
+{% endfor %}
 </ul>
 <h2 id="news">News</h2>
 <ul class="fa-ul">
+{% for link in site.data.links.news %}
   <li>
-    <i class="fa fa-bookmark"></i>
-    <b><a href="http://theverge.com">The Verge</a></b>
+    <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>
+    {% if link.star == "y" %}<b>{% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% if link.star == "y" %}</b>{% endif %}
   </li>
-  <li>
-    <i class="fa fa-bookmark"></i>
-    <b><a href="http://readwrite.com">ReadWrite</a></b>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="http://technologyreview.com">Technology Review</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="http://omgubuntu.co.uk">OMG! Ubuntu</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="http://omgchrome.com">OMG! Chrome</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="http://daringfireball.net">Daring Fireball</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="http://apple.com/hotnews">Apple Hot News</a>
-  </li>
+{% endfor %}
 </ul>
 <h2 id="services">Services</h2>
 <ul class="fa-ul">
+{% for link in site.data.links.services %}
   <li>
-    <i class="fa fa-bookmark"></i>
-    <b><a href="http://roon.io">Roon</a></b>
+    <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>
+    {% if link.star == "y" %}<b>{% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% if link.star == "y" %}</b>{% endif %}
   </li>
-  <li>
-    <i class="fa fa-bookmark"></i>
-    <b><a href="https://gmail.com">Gmail</a></b>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="http://ghost.org">Ghost</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="https://drive.google.com">Drive</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="https://drive.google.com/keep">Keep</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="https://youtube.com">YouTube</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="http://anapnea.net">Anapnea</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="http://respiratio.net">Respiratio</a>
-  </li>
+{% endfor %}
 </ul>
 <h2 id="oss">Open Source</h2>
 <ul class="fa-ul">
+{% for link in site.data.links.oss %}
   <li>
-    <i class="fa fa-bookmark"></i>
-    <b><a href="http://getbootstrap.com">Bootstrap</a></b>
+    <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>
+    {% if link.star == "y" %}<b>{% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% if link.star == "y" %}</b>{% endif %}
   </li>
-  <li>
-    <i class="fa fa-bookmark"></i>
-    <b><a href="http://maker.github.io/ratchet">Ratchet</a></b>
-  </li>
-  <li>
-    <i class="fa fa-bookmark"></i>
-    <b><a href="http://lordamit.github.io/Brightness">Brightness Controller</a></b>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="http://rethinkdb.com">RethinkDB</a>
-  </li>
-  <li>
-    <i class="fa fa-bookmark-o"></i>
-    <a href="https://hub.github.com">Hub</a>
-  </li>
+{% endfor %}
 </ul>
 <div class="panel panel-success" id="stars">
   <div class="panel-heading">
