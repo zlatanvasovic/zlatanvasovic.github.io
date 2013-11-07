@@ -1683,6 +1683,7 @@ input[type="button"].btn-block {
   position: relative;
   display: block;
   padding: 10px 15px;
+  border-bottom: 0 !important;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -1794,7 +1795,6 @@ input[type="button"].btn-block {
 }
 .nav-pills > li > a {
   border-radius: 3px;
-  border-bottom: 0 !important;
 }
 .nav-pills > li + li {
   margin-left: 2px;
