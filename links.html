@@ -5,52 +5,14 @@ slug: links
 lead: I need to keep cool links.
 ---
 
-<h2 id="social">Social networks</h2>
+{% for section in site.data.links %}
+<h2 id="{{ section.id }}">{{ section.name }}</h2>
 <ul class="fa-ul">
-{% for link in site.data.links.social %}
+{% for link in section.links %}
   <li>
     <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>
     {% if link.star == "y" %}<b>{% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% if link.star == "y" %}</b>{% endif %}
   </li>
 {% endfor %}
 </ul>
-<h2 id="news">News</h2>
-<ul class="fa-ul">
-{% for link in site.data.links.news %}
-  <li>
-    <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>
-    {% if link.star == "y" %}<b>{% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% if link.star == "y" %}</b>{% endif %}
-  </li>
 {% endfor %}
-</ul>
-<h2 id="services">Services</h2>
-<ul class="fa-ul">
-{% for link in site.data.links.services %}
-  <li>
-    <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>
-    {% if link.star == "y" %}<b>{% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% if link.star == "y" %}</b>{% endif %}
-  </li>
-{% endfor %}
-</ul>
-<h2 id="oss">Open source</h2>
-<ul class="fa-ul">
-{% for link in site.data.links.oss %}
-  <li>
-    <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>
-    {% if link.star == "y" %}<b>{% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% if link.star == "y" %}</b>{% endif %}
-  </li>
-{% endfor %}
-</ul>
-<div class="panel panel-success" id="stars">
-  <div class="panel-heading">
-    Stars
-    <i class="fa fa-star pull-right"></i>
-  </div>
-  <div class="panel-body">
-    <p>
-      <a href="https://github.com/stars/">
-        I <i class="fa fa-star fa-fw"></i> things at GitHub.
-      </a>
-    </p>
-  </div>
-</div>
