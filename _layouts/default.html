@@ -8,7 +8,7 @@
     <meta name="keywords" content="zdroid, github, design, programming">
     <meta name="robots" content="noodp,noydir">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
   </head>
   <body>
     <div class="container">
@@ -17,32 +17,27 @@
           <div class="page-header"><h1>{{ site.title }}</h1></div>
           <p>
             <a href="/">
-              <img class="thumbnail" src="/zd.png" width="150" height="150" alt="ZDroid">
+              <img class="img-thumbnail" src="/zd.png" width="150" height="150" alt="ZDroid">
             </a>
           </p>
           <p>{{ site.description }}</p>
-          <ul class="nav nav-pills nav-stacked">
+          <div class="btn-group-vertical nav-btn">
             {% for item in site.pages %}
             {% if item.slug %}
-            <li{% if page.slug == item.slug %} class="active"{% endif %}>
-              <a href="/{{ item.slug }}">
+            <a class="btn btn-default{% if page.slug == item.slug %} active{% endif %}" href="/{{ item.slug }}">
                 <i class="fa fa-{{ item.icon }} pull-right"></i>
                 {{ item.title }}
               </a>
             </li>
             {% endif %}
             {% endfor %}
-            <li>
-              <a href="http://twitter.com/{{ site.twitter }}">
-                <i class="fa fa-twitter pull-right"></i> Twitter
-              </a>
-            </li>
-            <li>
-              <a href="http://github.com/{{ site.github }}">
-                <i class="fa fa-github pull-right"></i> GitHub
-              </a>
-            </li>
-          </ul>
+            <a class="btn btn-default" href="https://twitter.com/{{ site.twitter }}">
+              <i class="fa fa-twitter pull-right"></i> Twitter
+            </a>
+            <a class="btn btn-default" href="https://github.com/{{ site.github }}">
+              <i class="fa fa-github pull-right"></i> GitHub
+            </a>
+          </div>
         </div>
         <div class="col-md-7">
           <div class="page-header"><h1>{{ page.title }}</h1></div>
