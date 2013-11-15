@@ -17,6 +17,10 @@
       url: https://plus.google.com
       star: n
 
+    - name: YouTube
+      url: https://youtube.com
+      star: n
+
     - name: Facebook
       url: https://facebook.com
       star: n
@@ -71,10 +75,6 @@
       url: https://drive.google.com/keep
       star: n
 
-    - name: YouTube
-      url: https://youtube.com
-      star: n
-
     - name: Anapnea
       url: http://anapnea.net
       star: n
@@ -104,4 +104,8 @@
 
     - name: Hub
       url: https://hub.github.com
+      star: n
+
+    - name: OSSCDN
+      url: http://osscdn.com
       star: n
