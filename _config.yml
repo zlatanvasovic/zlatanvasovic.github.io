@@ -4,6 +4,7 @@ author:       Zlatan Vasović
 description:  Personal site of your designer and programmer, Zlatan Vasović.
 keywords:     "zdroid, github, design, programming"
 url:          http://zdroid.github.io
+language:     en
 
 # Permalinks
 permalink:    pretty
