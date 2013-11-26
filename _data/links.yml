@@ -107,5 +107,13 @@
       star: n
 
     - name: OSSCDN
-      url: http://osscdn.com
+      url: http://osscdn.com/#/
+      star: n
+
+    - name: cdnjs
+      url: http://cdnjs.com/
+      star: n
+
+    - name: Bootstrap CDN
+      url: http://www.bootstrapcdn.com/
       star: n
