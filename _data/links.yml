@@ -36,6 +36,10 @@
       url: http://readwrite.com
       star: y
 
+    - name: Engadget
+      url: http://www.engadget.com/
+      star: n
+
     - name: Technology Review
       url: http://technologyreview.com
       star: n
