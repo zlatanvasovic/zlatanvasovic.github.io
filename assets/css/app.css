@@ -3378,18 +3378,18 @@ a.thumbnail.active {
 .fa-try:before {
   content: "\f195";
 }
-.nav-btn {
+.zd-btn-group {
   width: 100%;
 }
-.nav-btn .btn {
+.zd-btn-group .btn {
   padding: 8px 16px;
   text-align: left;
 }
-.nav-btn .fa {
+.zd-btn-group .fa {
   margin-top: 3px;
 }
 @media (min-width: 992px) {
-  .asidehead {
+  .zd-menu {
     position: fixed;
   }
 }
