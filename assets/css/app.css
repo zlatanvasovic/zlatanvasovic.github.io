@@ -3389,7 +3389,7 @@ a.thumbnail.active {
   margin-top: 3px;
 }
 @media (min-width: 992px) {
-  .zd-menu {
+  .zd-aside {
     position: fixed;
   }
 }
