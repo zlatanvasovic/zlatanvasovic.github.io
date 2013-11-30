@@ -5,7 +5,7 @@
   icon: paperclip
 
 - name: Hackwork
-  description: "Simple, layout-based PHP microframework for making HTML5 sites"
+  description: Simple, layout-based PHP microframework for making HTML5 sites
   source: ZDroid/hackwork
   state: primary
   icon: sitemap
