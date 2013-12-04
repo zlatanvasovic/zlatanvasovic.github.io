@@ -26,17 +26,18 @@
 {% for item in site.pages %}
 {% if item.slug %}
             <a class="btn btn-{% if page.slug == item.slug %}success{% else %}default{% endif %}" href="{{ item.url }}">
-                <i class="fa fa-{{ item.icon }} pull-right"></i>
-                {{ item.title }}
-              </a>
-            </li>
+              <i class="fa fa-{{ item.icon }} pull-right"></i>
+              {{ item.title }}
+            </a>
 {% endif %}
 {% endfor %}
             <a class="btn btn-default" href="https://twitter.com/{{ site.twitter }}">
-              <i class="fa fa-twitter pull-right"></i> Twitter
+              <i class="fa fa-twitter pull-right"></i>
+              Twitter
             </a>
             <a class="btn btn-default" href="https://github.com/{{ site.github }}">
-              <i class="fa fa-github pull-right"></i> GitHub
+              <i class="fa fa-github pull-right"></i>
+              GitHub
             </a>
           </div>
         </div>
