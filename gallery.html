@@ -1,0 +1,15 @@
+---
+layout: default
+title: Gallery
+slug: gallery
+lead: Some of my best drawings.
+icon: picture-o
+---
+
+<div class="row">
+{% for artwork in site.data.gallery %}  <div class="col-md-2">
+    <a class="thumbnail" href="/assets/img/{{ artwork.source }}">
+      <img src="/assets/img/{{ artwork.source }}" alt="{{ artwork.name }}">
+    </a>
+  </div>{% endfor %}
+</div>
