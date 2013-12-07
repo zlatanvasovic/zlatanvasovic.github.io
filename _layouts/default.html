@@ -15,11 +15,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 zd-aside">
-          <div class="page-header"><h1>{{ site.title }}</h1></div>
+          <div class="page-header">
+            <h1>
+              <a href="/">
+                {{ site.title }}
+              </a>
+            </h1>
+          </div>
           <p>
-            <a href="/">
-              <img class="img-thumbnail" src="/assets/img/zd.png" width="150" height="150" alt="ZDroid">
-            </a>
+            <img class="img-thumbnail" src="/assets/img/zd.png" width="150" height="150" alt="ZDroid">
           </p>
           <p>{{ site.description }}</p>
           <div class="btn-group-vertical zd-btn-group">{% for item in site.pages %}{% if item.slug %}
