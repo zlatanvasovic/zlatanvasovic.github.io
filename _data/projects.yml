@@ -1,35 +1,35 @@
 - name: Pulsir
-  description: Blogs, reinvented.
+  description: "Blogs, reinvented."
   src: pulsir/pulsir
   state: default
   icon: paperclip
 
 - name: Hackwork
-  description: Simple, layout-based PHP microframework for making HTML5 sites
+  description: "Simple, layout-based PHP micro framework for making HTML5 sites"
   src: ZDroid/hackwork
   state: primary
   icon: sitemap
 
 - name: Droid
-  description: Droid drawn 100% in CSS
+  description: "Droid drawn 100% in CSS"
   src: ZDroid/droid
   state: success
   icon: android
 
 - name: Restilizr
-  description: Chrome extension for quick adding custom CSS styles
+  description: "Chrome extension for quick adding custom CSS styles"
   src: ZDroid/restilizr
   state: info
   icon: edit
 
 - name: Mistype
-  description: Simple CSS framework. Grid. Type. Utility.
+  description: "Simple CSS framework. Grid. Type. Utility."
   src: ZDroid/mistype
   state: warning
   icon: font
 
 - name: Dotfiles
-  description: My dotfiles
+  description: "My dotfiles"
   src: ZDroid/dotfiles
   state: danger
   icon: dot-circle-o
