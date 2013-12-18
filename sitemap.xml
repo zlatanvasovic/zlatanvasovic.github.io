@@ -3,8 +3,13 @@ layout: nil
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% for page in site.pages %}{% if page.lead %}
-  <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Pages -->
+  {% for page in site.pages %}{% if page.lead %}<url>
     <loc>{{ site.url }}{{ page.url }}</loc>
   </url>{% endif %}{% endfor %}
+  <!-- Gallery -->
+  {% for artwork in site.data.gallery %}<url>
+    <loc>{{ site.url }}/{{ artwork.source }}</loc>
+  </url>{% endfor %}
 </urlset>
