@@ -1,5 +1,5 @@
 - name: Mountain lake
-  source: lake.png
+  src: lake.png
 
 - name: iOS flat mockup
-  source: ios-flat-mockup.png
+  src: ios-flat-mockup.png

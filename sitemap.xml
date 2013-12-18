@@ -10,6 +10,6 @@ layout: nil
   </url>{% endif %}{% endfor %}
   <!-- Gallery -->
   {% for artwork in site.data.gallery %}<url>
-    <loc>{{ site.url }}/{{ artwork.source }}</loc>
+    <loc>{{ site.url }}/{{ artwork.src }}</loc>
   </url>{% endfor %}
 </urlset>
