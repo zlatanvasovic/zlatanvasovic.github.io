@@ -29,7 +29,7 @@
   icon: font
 
 - name: Dotfiles
-  description: "My dotfiles"
+  description: "@ZDroid does dotfiles"
   src: ZDroid/dotfiles
   state: danger
   icon: dot-circle-o
