@@ -23,7 +23,7 @@
   icon: edit
 
 - name: Mistype
-  description: "Simple CSS framework. Grid. Type. Utility."
+  description: "Simple CSS prototyping framework"
   src: ZDroid/mistype
   state: warning
   icon: font
