@@ -41,7 +41,10 @@
           </div>
         </div>
         <div class="col-md-7 col-md-push-3" id="content">
-          <div class="page-header"><h1>{{ page.title }}</h1></div>
+          <div class="page-header">
+            <!-- Use class instead of element to avoid SEO errors -->
+            <h2 class="h1">{{ page.title }}</h2>
+          </div>
           <p class="lead">{{ page.lead }}</p>
           {{ content }}
         </div>
