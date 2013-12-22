@@ -24,6 +24,7 @@
             <img class="img-thumbnail" src="/assets/img/zd.png" width="150" height="150" alt="ZDroid">
           </p>
           <p>{{ site.description }}</p>
+          <a class="sr-only" href="#content">Skip to main content</a>
           <div class="btn-group-vertical zd-btn-group">{% for item in site.pages %}{% if item.slug %}
             <a class="btn btn-{% if page.slug == item.slug %}success{% else %}default{% endif %}" href="{{ item.url }}">
               <i class="fa fa-{{ item.icon }} pull-right"></i>
@@ -39,7 +40,7 @@
             </a>
           </div>
         </div>
-        <div class="col-md-7 col-md-push-3">
+        <div class="col-md-7 col-md-push-3" id="content">
           <div class="page-header"><h1>{{ page.title }}</h1></div>
           <p class="lead">{{ page.lead }}</p>
           {{ content }}
