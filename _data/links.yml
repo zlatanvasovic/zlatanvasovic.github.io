@@ -1,123 +1,123 @@
-- name: Social networks
+- name: "Social networks"
   id: social
   links:
     - name: Twitter
-      url: https://twitter.com
+      url: "https://twitter.com"
       star: y
 
     - name: GitHub
-      url: https://github.com
+      url: "https://github.com"
       star: y
 
     - name: Geeklist
-      url: https://geekli.st
+      url: "https://geekli.st"
       star: n
 
     - name: Google+
-      url: https://plus.google.com
+      url: "https://plus.google.com"
       star: n
 
     - name: YouTube
-      url: https://youtube.com
+      url: "https://youtube.com"
       star: n
 
     - name: Facebook
-      url: https://facebook.com
+      url: "https://facebook.com"
       star: n
 
 - name: News
   id: news
   links:
-    - name: The Verge
-      url: http://theverge.com
+    - name: "The Verge"
+      url: "http://theverge.com"
       star: y
 
     - name: ReadWrite
-      url: http://readwrite.com
+      url: "http://readwrite.com"
       star: y
 
     - name: Engadget
-      url: http://www.engadget.com/
+      url: "http://www.engadget.com/"
       star: n
 
-    - name: Technology Review
-      url: http://technologyreview.com
+    - name: "Technology Review"
+      url: "http://technologyreview.com"
       star: n
 
-    - name: OMG! Ubuntu
-      url: http://omgubuntu.co.uk
+    - name: "OMG! Ubuntu"
+      url: "http://omgubuntu.co.uk"
       star: n
 
-    - name: OMG! Chrome
-      url: http://omgchrome.com
+    - name: "OMG! Chrome"
+      url: "http://omgchrome.com"
       star: n
 
-    - name: Daring Fireball
-      url: http://daringfireball.net
+    - name: "Daring Fireball"
+      url: "http://daringfireball.net"
       star: n
 
 - name: Services
   id: services
   links:
     - name: Roon
-      url: http://roon.io
+      url: "http://roon.io"
       star: y
 
     - name: Gmail
-      url: https://gmail.com
+      url: "https://gmail.com"
       star: y
 
     - name: Ghost
-      url: http://ghost.org
+      url: "http://ghost.org"
       star: n
 
     - name: Drive
-      url: https://drive.google.com
+      url: "https://drive.google.com"
       star: n
 
     - name: Keep
-      url: https://drive.google.com/keep
+      url: "https://drive.google.com/keep"
       star: n
 
     - name: Anapnea
-      url: http://anapnea.net
+      url: "http://anapnea.net"
       star: n
 
     - name: Respiratio
-      url: https://respiratio.net
+      url: "https://respiratio.net"
       star: n
 
-- name: Open source
+- name: "Open source"
   id: oss
   links:
     - name: Bootstrap
-      url: http://getbootstrap.com
+      url: "http://getbootstrap.com"
       star: y
 
     - name: Ratchet
-      url: http://maker.github.io/ratchet
+      url: "http://maker.github.io/ratchet"
       star: y
 
-    - name: Brightness Controller
-      url: http://lordamit.github.io/Brightness
+    - name: "Brightness Controller"
+      url: "http://lordamit.github.io/Brightness"
       star: y
 
     - name: RethinkDB
-      url: http://rethinkdb.com
+      url: "http://rethinkdb.com"
       star: n
 
     - name: Hub
-      url: https://hub.github.com
+      url: "https://hub.github.com"
       star: n
 
     - name: OSSCDN
-      url: http://osscdn.com/#/
+      url: "http://osscdn.com/#/"
       star: n
 
     - name: cdnjs
-      url: http://cdnjs.com/
+      url: "http://cdnjs.com/"
       star: n
 
-    - name: Bootstrap CDN
-      url: http://www.bootstrapcdn.com/
+    - name: "Bootstrap CDN"
+      url: "http://www.bootstrapcdn.com/"
       star: n
