@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://zdroid.github.io/sitemap.xml
