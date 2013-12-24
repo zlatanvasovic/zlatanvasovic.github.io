@@ -46,7 +46,8 @@
         <hr>
       </div>
       <section>
-        {% if page.slug %}<h2>{{ page.title }}</h2>{% endif %}
+        <h2>{{ page.title }}</h2>
+        <p class="lead">{{ page.lead }}</p>
         {{ content }}
       </section>
     </div>
