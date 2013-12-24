@@ -6,7 +6,7 @@ lead: "I need to keep good links."
 icon: link
 ---
 
-{% for section in site.data.links %}<h2 id="{{ section.id }}">{{ section.name }}</h2>
+{% for section in site.data.links %}<h3 id="{{ section.id }}">{{ section.name }}</h2>
 <ul class="fa-ul">{% for link in section.links %}
   <li>
     <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>

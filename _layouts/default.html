@@ -46,6 +46,7 @@
         <hr>
       </div>
       <section>
+        {% if page.slug %}<h2>{{ page.title }}</h2>{% endif %}
         {{ content }}
       </section>
     </div>
