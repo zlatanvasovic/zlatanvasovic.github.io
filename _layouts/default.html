@@ -8,28 +8,38 @@
     <meta name="keywords" content="{{ site.keywords }}">
     <meta name="robots" content="noodp,noydir">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
   </head>
   <body>
     <div class="zd-container">
       <div class="zd-head">
         <h1>
-          <a href="/">
-            {{ site.title }}
-          </a>
+          {{ site.title }}
         </h1>
         <p>
           <img class="img-thumbnail img-circle zd-logo" src="/assets/img/zd.png" width="150" height="150" alt="ZDroid">
         </p>
         <p>{{ site.description }}</p>
-        <ul class="list-inline">{% for item in site.pages %}{% if item.slug %}
+        <ul class="list-inline">
+          {% if page.slug %}
+          <li>
+            <a href="/">
+              <i class="fa fa-home"></i>
+              Home
+            </a>
+          </li>
+          {% endif %}
+          {% for item in site.pages %}
+          {% if item.slug %}
           <li>
             <a href="{{ item.url }}">
               <i class="fa fa-{{ item.icon }}"></i>
               {{ item.title }}
-            </a>{% endif %}{% endfor %}
+            </a>
           </li>
+          {% endif %}
+          {% endfor %}
           <li>
             <a href="https://twitter.com/{{ site.twitter }}">
               <i class="fa fa-twitter"></i>
@@ -43,8 +53,8 @@
             </a>
           </li>
         </ul>
-        <hr>
       </div>
+      <hr>
       <section>
         <h2>{{ page.title }}</h2>
         <p class="lead">{{ page.lead }}</p>

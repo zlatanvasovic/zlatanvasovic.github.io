@@ -1,6 +1,9 @@
 # Dependencies
 pygments:     true
 
+# Permalinks
+permalink:    pretty
+
 # Meta data
 title:        ZDroid
 author:       "Zlatan Vasović"
@@ -9,10 +12,7 @@ keywords:     "zdroid, github, design, designer, programming, programmer"
 url:          "http://zdroid.github.io"
 language:     en
 
-# Permalinks
-permalink:    pretty
-
-# Links and social networks
+# Links
 blog:         "http://zdroid.roon.io"
 twitter:      zdr0id
 github:       ZDroid
