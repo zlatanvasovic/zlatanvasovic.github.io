@@ -1,8 +1,8 @@
-- name: Pulsir
-  description: "Blogs, reinvented."
-  src: pulsir/pulsir
+- name: Heyday
+  description: "Bloat-free front-end framework for your next project"
+  src: pulsir/heyday
   state: default
-  icon: paperclip
+  icon: sun-o
 
 - name: Hackwork
   description: "Layout-based PHP micro framework for full-stack HTML5 sites"
@@ -16,11 +16,11 @@
   state: success
   icon: android
 
-- name: Restilizr
-  description: "Chrome extension for quick adding custom CSS styles"
-  src: ZDroid/restilizr
+- name: Sanitize.css
+  description: "Minimal CSS normalization library"
+  src: ZDroid/sanitize.css
   state: info
-  icon: edit
+  icon: star
 
 - name: Mistype
   description: "Simple CSS prototyping framework"
