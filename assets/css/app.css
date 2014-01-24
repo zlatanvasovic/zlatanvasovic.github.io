@@ -268,7 +268,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.428571429;
-  color: #333333;
+  color: #555555;
   background-color: #ffffff;
 }
 input,
@@ -2802,8 +2802,8 @@ a.thumbnail.active {
  */
 
 .zd-container {
-  max-width: 96%;
-  padding: 2%;
+  max-width: 90%;
+  padding: 5%;
   margin-right: auto;
   margin-left: auto;
 }
