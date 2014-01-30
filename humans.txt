@@ -1,9 +1,9 @@
 # humanstxt.org
 
-# AUTHOR
+# Author
 
   Zlatan Vasović -- @zdr0id
 
-# TECHNOLOGIES
+# Technologies
 
   HTML5, CSS3

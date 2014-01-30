@@ -1,15 +1,23 @@
 # Server
+# ------
+
 url:          http://zdroid.github.io
-root:         /
+root:         / # don't forget trailling slash
 encoding:     UTF-8
 
 # Dependencies
+# ------------
+
 markdown:     kramdown
 
 # Permalinks
+# ----------
+
 permalink:    pretty
 
 # Meta data
+# ---------
+
 title:        ZDroid
 author:       Zlatan Vasović
 description:  Personal site of young designer and developer, Zlatan Vasović.
@@ -17,6 +25,8 @@ keywords:     zdroid, github, design, designer, development, developer
 language:     en
 
 # Links
+# -----
+
 blog:         http://zdroid.roon.io
 twitter:      zdr0id
 github:       ZDroid
