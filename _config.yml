@@ -1,13 +1,13 @@
+# Server
+url:          http://zdroid.github.io
+root:         /
+encoding:     UTF-8
+
 # Dependencies
 markdown:     kramdown
 
 # Permalinks
 permalink:    pretty
-
-# Server
-url:          http://zdroid.github.io
-root:         /
-encoding:     UTF-8
 
 # Meta data
 title:        ZDroid
