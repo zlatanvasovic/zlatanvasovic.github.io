@@ -6,14 +6,14 @@ permalink:    pretty
 
 # Meta data
 title:        ZDroid
-author:       "Zlatan Vasović"
-description:  "Personal site of young designer and developer, Zlatan Vasović."
-keywords:     "zdroid, github, design, designer, development, developer"
-url:          "http://zdroid.github.io"
+author:       Zlatan Vasović
+description:  Personal site of young designer and developer, Zlatan Vasović.
+keywords:     zdroid, github, design, designer, development, developer
 language:     en
 
 # Links
-blog:         "http://zdroid.roon.io"
+url:          http://zdroid.github.io
+blog:         http://zdroid.roon.io
 twitter:      zdr0id
 github:       ZDroid
 instagram:    zdr0id

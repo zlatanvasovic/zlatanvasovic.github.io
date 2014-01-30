@@ -1,29 +1,29 @@
 - name: Heyday
-  description: "Bloat-free front-end framework for your next project"
+  description: Bloat-free front-end framework for your next project
   src: pulsir/heyday
   state: default
   icon: sun-o
 
 - name: Hackwork
-  description: "Layout-based PHP micro framework for full-stack HTML5 sites"
+  description: Layout-based PHP micro framework for full-stack HTML5 sites
   src: ZDroid/hackwork
   state: primary
   icon: sitemap
 
 - name: Droid
-  description: "Droid drawn 100% in CSS"
+  description: Droid drawn 100% in CSS
   src: ZDroid/droid
   state: success
   icon: android
 
 - name: Sanitize.css
-  description: "Minimal CSS normalization library"
+  description: Minimal CSS normalization library
   src: ZDroid/sanitize.css
   state: info
   icon: star
 
 - name: Mistype
-  description: "Simple CSS prototyping framework"
+  description: Simple CSS prototyping framework
   src: ZDroid/mistype
   state: warning
   icon: font
