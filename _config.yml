@@ -1,8 +1,13 @@
 # Dependencies
-pygments:     true
+markdown:     kramdown
 
 # Permalinks
 permalink:    pretty
+
+# Server
+url:          http://zdroid.github.io
+root:         /
+encoding:     UTF-8
 
 # Meta data
 title:        ZDroid
@@ -12,7 +17,6 @@ keywords:     zdroid, github, design, designer, development, developer
 language:     en
 
 # Links
-url:          http://zdroid.github.io
 blog:         http://zdroid.roon.io
 twitter:      zdr0id
 github:       ZDroid
