@@ -2811,6 +2811,7 @@ a.thumbnail.active {
   text-align: center;
 }
 .zd-logo {
+  border-radius: 10px;
   opacity: .7;
 }
 .zd-logo:hover {
