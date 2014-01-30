@@ -9,13 +9,13 @@ icon: link
 {% for section in site.data.links %}
 <h3 id="{{ section.id }}">{{ section.name }}</h3>
 <ul class="fa-ul">
-{% for link in section.links %}
+  {% for link in section.links %}
   <li>
     <i class="fa fa-bookmark{% if link.star == "n" %}-o{% endif %}"></i>
     {% if link.star == "y" %}<b>{% endif %}
     <a href="{{ link.url }}">{{ link.name }}</a>
     {% if link.star == "y" %}</b>{% endif %}
   </li>
-{% endfor %}
+  {% endfor %}
 </ul>
 {% endfor %}

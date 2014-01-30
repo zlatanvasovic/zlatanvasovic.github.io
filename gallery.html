@@ -7,11 +7,11 @@ icon: picture-o
 ---
 
 <div class="row">
-{% for artwork in site.data.gallery %}
+  {% for artwork in site.data.gallery %}
   <div class="zd-col-thumb">
     <a class="thumbnail zd-thumb" href="{{ site.baseurl }}assets/img/art/{{ artwork.src }}">
       <img class="zd-thumb-img" src="{{ site.baseurl }}img/art/{{ artwork.src }}" alt="{{ artwork.name }}">
     </a>
   </div>
-{% endfor %}
+  {% endfor %}
 </div>
