@@ -1,4 +1,7 @@
+---
+---
+
 # www.robotstxt.org
 
 User-agent: *
-Sitemap: http://zdroid.github.io/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml
