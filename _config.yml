@@ -2,7 +2,7 @@
 # ------
 
 url:          http://zdroid.github.io
-root:         / # don't forget trailing slash
+root:         /
 encoding:     UTF-8
 
 # Dependencies

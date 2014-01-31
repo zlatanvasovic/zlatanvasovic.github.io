@@ -1,8 +1,11 @@
+---
+---
+
 # humanstxt.org
 
 # Author
 
-  Zlatan Vasović -- @zdr0id
+  {{ site.author}} {% if site.twitter %}-- @{{ site.twitter }}{% endif %}
 
 # Technologies
 
