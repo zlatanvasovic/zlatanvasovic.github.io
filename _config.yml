@@ -4,6 +4,7 @@
 url:          http://zdroid.github.io
 root:
 encoding:     UTF-8
+exclude:      ["README.md"]
 
 # Dependencies
 # ------------
