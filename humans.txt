@@ -5,7 +5,7 @@
 
 # Author
 
-  {{ site.author}} {% if site.twitter %}-- @{{ site.twitter }}{% endif %}
+  {{ site.author }}{% if site.twitter %} -- @{{ site.twitter }}{% endif %}
 
 # Technologies
 
