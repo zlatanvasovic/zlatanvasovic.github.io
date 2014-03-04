@@ -11,8 +11,8 @@
     <meta name="keywords" content="{{ site.keywords }}">
     <meta name="robots" content="noodp,noydir">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ site.root }}/assets/css/app.css">
-    <link rel="icon" type="image/x-icon" href="{{ site.root }}/assets/img/favicon.ico">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css">
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
   </head>
   <body>
     <div class="zd-container">
@@ -23,14 +23,14 @@
           {{ site.title }}
         </h1>
         <p>
-          <img class="img-thumbnail zd-logo" src="{{ site.root }}/assets/img/zdroid.png" width="150" height="150" alt="ZDroid">
+          <img class="img-thumbnail zd-logo" src="{{ site.baseurl }}/assets/img/zdroid.png" width="150" height="150" alt="ZDroid">
         </p>
         <p>{{ site.description }}</p>
         <a class="sr-only" href="#content">Skip to main content</a>
         <ul class="list-inline">
           {% if page.slug %}
           <li>
-            <a href="{{ site.root }}/">
+            <a href="{{ site.baseurl }}/">
               <i class="fa fa-home"></i>
               Home
             </a>
