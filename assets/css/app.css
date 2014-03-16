@@ -20,32 +20,29 @@
   text-align: center;
 }
 
-.zd-logo {
+.logo {
   border-radius: 10px;
   opacity: .7;
 }
 
-.zd-logo:hover {
+.logo:hover {
   opacity: .9;
 }
 
-.zd-col-thumb {
+.thumbnail-col {
   position: relative;
   float: left;
+  height: 150px;
   width: auto;
   min-height: 1px;
   padding-left: 2%;
   padding-right: 2%;
 }
 
-.zd-col-thumb:first-child { margin-left: -2%; }
-.zd-col-thumb:last-child { margin-right: -2%; }
+.thumbnail-col:first-child { margin-left: -2%; }
+.thumbnail-col:last-child { margin-right: -2%; }
 
-.zd-thumb {
-  height: 150px;
-}
-
-.zd-thumb-img {
+.thumbnail-col img {
   max-height: 100%;
   max-width: 100%;
   margin-right: 0 !important;
