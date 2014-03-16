@@ -95,7 +95,7 @@
       star: y
 
     - name: Ratchet
-      url: http://maker.github.io/ratchet
+      url: http://goratchet.com
       star: y
 
     - name: Brightness Controller
