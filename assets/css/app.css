@@ -16,7 +16,7 @@
   margin-left: auto;
 }
 
-.zd-head {
+.header {
   text-align: center;
 }
 
@@ -38,13 +38,8 @@
   padding-right: 2%;
 }
 
-.zd-col-thumb:first-child {
-  margin-left: -2%;
-}
-
-.zd-col-thumb:last-child {
-  margin-right: -2%;
-}
+.zd-col-thumb:first-child { margin-left: -2%; }
+.zd-col-thumb:last-child { margin-right: -2%; }
 
 .zd-thumb {
   height: 150px;
