@@ -62,7 +62,7 @@
 .k { color: #069; }
 .o { color: #555; }
 .cm { color: #09f; font-style: italic; }
-.cp { color: #099 }
+.cp { color: #099; }
 .c1 { color: #999; }
 .cs { color: #999; }
 .gd { background-color: #fcc; border: 1px solid #c00; }
@@ -73,7 +73,7 @@
 .go { color: #aaa; }
 .gp { color: #009; }
 .gu { color: #030; }
-.gt { color: #9c6 }
+.gt { color: #9c6; }
 .kc { color: #069; }
 .kd { color: #069; }
 .kn { color: #069; }
@@ -102,7 +102,7 @@
 .mo { color: #f60; }
 .sb { color: #c30; }
 .sc { color: #c30; }
-.sd { color: #c30; font-style: italic }
+.sd { color: #c30; font-style: italic; }
 .s2 { color: #c30; }
 .se { color: #c30; }
 .sh { color: #c30; }
