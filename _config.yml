@@ -1,9 +1,10 @@
 # Server
 # ------
 
+encoding:     UTF-8
 url:          http://zdroid.github.io
 baseurl:
-encoding:     UTF-8
+permalink:    pretty
 exclude:
   - README.md
 
@@ -11,11 +12,6 @@ exclude:
 # ------------
 
 markdown:     kramdown
-
-# Permalinks
-# ----------
-
-permalink:    pretty
 
 # Meta data
 # ---------
