@@ -23,7 +23,6 @@
   border-radius: 10px;
   opacity: .7;
 }
-
 .logo:hover {
   opacity: .9;
 }
@@ -36,7 +35,6 @@
   padding-left: 2%;
   padding-right: 2%;
 }
-
 .thumbnail-col:first-child { margin-left: -2%; }
 .thumbnail-col:last-child { margin-right: -2%; }
 
@@ -115,7 +113,6 @@
 .vg { color: #033; }
 .vi { color: #033; }
 .il { color: #f60; }
-
 .css .o,
 .css .o + .nt,
 .css .nt + .nt { color: #999; }
