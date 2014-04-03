@@ -31,5 +31,5 @@ language:     en
 
 blog:         http://zdroid.roon.io
 twitter:      zdr0id
-_github:      ZDroid
+_github:      ZDroid # `site.github` is used by GitHub pages
 instagram:    zdr0id
