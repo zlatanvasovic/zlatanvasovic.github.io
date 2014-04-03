@@ -5,7 +5,7 @@
 {% include font-awesome.min.css %}
 
 /*!
- * Custom
+ * Custom styles
  */
 
 .container {
@@ -51,6 +51,10 @@
 .panel-body :last-child {
   margin-bottom: 0;
 }
+
+/*
+ * Syntax highlight
+ */
 
 .hll { background-color: #ffc; }
 .c { color: #999; }
