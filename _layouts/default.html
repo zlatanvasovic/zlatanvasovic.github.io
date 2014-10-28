@@ -28,35 +28,25 @@
         <p>{{ site.description }}</p>
         <a class="sr-only" href="#content">Skip to main content</a>
         <ul class="list-inline">
-          {% if page.slug %}
           <li>
-            <a href="{{ site.baseurl }}/">
-              <i class="fa fa-home"></i>
-              Home
-            </a>
+            <i class="fa fa-home text-success"></i>
+            <a href="{{ site.baseurl }}/">Home</a>
           </li>
-          {% endif %}
           {% for item in site.pages %}
           {% if item.slug %}
           <li>
-            <a href="{{ item.url }}">
-              <i class="fa fa-{{ item.icon }}"></i>
-              {{ item.title }}
-            </a>
+            <i class="fa fa-{{ item.icon }} text-success"></i> 
+            <a href="{{ item.url }}">{{ item.title }}</a>
           </li>
           {% endif %}
           {% endfor %}
           <li>
-            <a href="https://twitter.com/{{ site.twitter }}">
-              <i class="fa fa-twitter"></i>
-              Twitter
-            </a>
+            <i class="fa fa-twitter text-success"></i> 
+            <a href="https://twitter.com/{{ site.twitter }}">Twitter</a>
           </li>
           <li>
-            <a href="https://github.com/{{ site._github }}">
-              <i class="fa fa-github"></i>
-              GitHub
-            </a>
+            <i class="fa fa-github text-success"></i> 
+            <a href="https://github.com/{{ site._github }}">GitHub</a>
           </li>
         </ul>
       </header>
