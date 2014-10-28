@@ -8,10 +8,16 @@ permalink:    pretty
 exclude:
   - README.md
 
-# Dependencies
-# ------------
+# Defaults
+# --------
 
-markdown:     kramdown
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
 
 # Meta data
 # ---------
