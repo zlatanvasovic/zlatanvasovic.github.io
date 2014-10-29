@@ -3,7 +3,7 @@
 
 encoding:     UTF-8
 url:          http://zdroid.github.io
-baseurl:
+baseurl:      # empty
 permalink:    pretty
 exclude:
   - README.md
