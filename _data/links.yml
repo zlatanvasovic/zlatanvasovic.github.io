@@ -59,17 +59,13 @@
 - name: Services
   id: services
   links:
-    - name: Roon
-      url: http://roon.io
+    - name: Ghost
+      url: http://ghost.org
       star: y
 
     - name: Gmail
       url: https://gmail.com
       star: y
-
-    - name: Ghost
-      url: http://ghost.org
-      star: n
 
     - name: Drive
       url: https://drive.google.com
@@ -98,17 +94,13 @@
       url: http://goratchet.com
       star: y
 
+    - name: Hub
+      url: https://hub.github.com
+      star: y
+
     - name: Brightness Controller
       url: http://lordamit.github.io/Brightness
       star: y
-
-    - name: RethinkDB
-      url: http://rethinkdb.com
-      star: n
-
-    - name: Hub
-      url: https://hub.github.com
-      star: n
 
     - name: cdnjs
       url: http://cdnjs.com/
@@ -120,4 +112,8 @@
 
     - name: Bootstrap CDN
       url: http://www.bootstrapcdn.com/
+      star: n
+
+    - name: RethinkDB
+      url: http://rethinkdb.com
       star: n
