@@ -12,12 +12,16 @@ exclude:
 # --------
 
 defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
+  - scope:
+      path:   ""
+      type:   pages
     values:
-      layout: "default"
+      layout: default
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post"
 
 # Meta data
 # ---------
@@ -31,7 +35,5 @@ language:     en
 # Links
 # -----
 
-blog:         http://zdroid.roon.io
 twitter:      zdr0id
 _github:      ZDroid # `site.github` is used by GitHub pages
-instagram:    zdr0id
