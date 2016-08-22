@@ -20,6 +20,7 @@
 }
 
 .logo {
+  border: 2px solid #bbb;
   border-radius: 10px;
   opacity: .7;
 }

@@ -26,14 +26,14 @@ defaults:
 # Meta data
 # ---------
 
-title:        ZDroid
+title:        Zlatan Vasović
 author:       Zlatan Vasović
 description:  Personal site of young designer and developer, Zlatan Vasović.
-keywords:     zdroid, github, design, designer, development, developer, code
+keywords:     zdroid, github, design, development, code, science, physics
 language:     en
 
 # Links
 # -----
 
 twitter:      zdr0id
-_github:      ZDroid # `site.github` is used by GitHub pages
+_github:      zdroid # `site.github` is used by GitHub pages
