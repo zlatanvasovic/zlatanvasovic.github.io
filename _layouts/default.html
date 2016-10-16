@@ -11,7 +11,7 @@
     <meta name="keywords" content="{{ site.keywords }}">
     <meta name="robots" content="noodp,noydir">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css">
     <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
   </head>
   <body>
@@ -35,17 +35,17 @@
           {% for item in site.pages %}
           {% if item.slug %}
           <li>
-            <i class="fa fa-{{ item.icon }} text-success"></i> 
+            <i class="fa fa-{{ item.icon }} text-success"></i>
             <a href="{{ item.url }}">{{ item.title }}</a>
           </li>
           {% endif %}
           {% endfor %}
           <li>
-            <i class="fa fa-twitter text-success"></i> 
+            <i class="fa fa-twitter text-success"></i>
             <a href="https://twitter.com/{{ site.twitter }}">Twitter</a>
           </li>
           <li>
-            <i class="fa fa-github text-success"></i> 
+            <i class="fa fa-github text-success"></i>
             <a href="https://github.com/{{ site._github }}">GitHub</a>
           </li>
         </ul>
