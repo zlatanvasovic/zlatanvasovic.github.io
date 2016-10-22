@@ -2,7 +2,7 @@
 
 > @zdroid's site
 
-This is my site. You can modify this code and use it for your site.
+This is my site. You can modify the code and use it for your site.
 
 ## License
 
