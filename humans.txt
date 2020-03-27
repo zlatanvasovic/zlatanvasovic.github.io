@@ -1,12 +1,9 @@
----
----
-
 # humanstxt.org
 
 # Author
 
-  {{ site.author }}
+  Zlatan Vasović
 
 # Technologies
 
-  HTML5, CSS3, JavaScript, Jekyll
+  HTML, CSS, JavaScript
