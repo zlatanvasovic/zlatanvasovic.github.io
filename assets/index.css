@@ -172,3 +172,17 @@ a:hover {
   border: 2px solid #bbb;
   border-radius: 10px;
 }
+
+/*
+ * Mobile-first
+ */
+
+@media (max-width: 768px) {
+  body {
+    padding: 5%;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
