@@ -140,9 +140,10 @@ ol ul, ol ol {
  */
 
 h1 {
-  color: #1c2f54;
-  font-size: 40px;
   margin-bottom: 50px;
+  font-size: 40px;
+  line-height: 1;
+  color: #1c2f54;
 }
 
 p {
