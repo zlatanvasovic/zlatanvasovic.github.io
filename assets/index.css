@@ -33,6 +33,7 @@ body {
     linear-gradient(-45deg, transparent 75px, transparent 76px, #bbb 76px, #bbb 77px, transparent 78px, transparent 109px),
     #fff;
   background-size: 100% 6px, 109px 109px, 109px 109px;
+  background-attachment: fixed;
   font: 20px/30px "Playfair Display", serif;
   color: #000;
 }
@@ -106,6 +107,7 @@ ol ul, ol ol {
   position: relative;
   padding-right: 2%;
   padding-left: 2%;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* Responsive column sizing */
@@ -148,11 +150,6 @@ h1 {
 
 p {
   text-align: justify;
-}
-
-h1,
-p {
-  background-color: rgba(255, 255, 255, 0.7);
 }
 
 a,
