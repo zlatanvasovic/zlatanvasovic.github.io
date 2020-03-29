@@ -150,6 +150,11 @@ p {
   text-align: justify;
 }
 
+h1,
+p {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 a,
 a:visited,
 a:hover {
