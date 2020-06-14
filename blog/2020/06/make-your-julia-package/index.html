@@ -1,33 +1,142 @@
-<!doctype html> <html lang=en > <meta charset=utf-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/katex/katex.min.css"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin=anonymous > <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel=stylesheet > <link rel=stylesheet  href="/css/index.css"> <link rel=icon  href="/assets/picture-32.png"> <title>Make your Julia package in 10 minutes &middot; Zlatan's Journal</title> <meta name=author  content="Zlatan Vasović"> <meta name=description  content="An exploratory journey into interdisciplinary research."> <meta name=keywords  content="zlatan, vasovic, zdroid, github, blog, developer, researcher"> <div class="container p-md-5 mb-4"> <div class=row > <div class=col > <h1 class="text-title font-weight-bold display-4">Zlatan's Journal</h1> <p class=lead >An exploratory journey into interdisciplinary research.</p> </div> <div class="col-md-3 text-md-right"> <p><img class="border border-dark" src="/assets/picture.png" alt="A picture of me" width=125 ></p> </div> </div> <ul class="nav nav-pills"> <li class=nav-item > <a class="nav-link " href="/">Home</a> <li class=nav-item > <a class="nav-link " href="/projects">Projects</a> <li class=nav-item > <a class="nav-link " href="/about">About me</a> <li class="nav-item float-md-right"> <a class=nav-link  href="https://github.com/zdroid">GitHub</a> </ul> <hr class=bg-primary > <div class="container p-0 mt-5 mb-5"> <h1 class=text-title >Make your Julia package in 10 minutes</h1> <h4 class="mb-5 font-weight-light">June 13, 2020</h4> <div class=franklin-content ><p>Making a package can be a hassle, but in Julia it doesn&#39;t have to be so. There are some great tools which can help you achieve this task in less than 10 minutes.</p> <p>Suppose you came up with the formula to calculate n-th term of the famed Fibonacci series. Using <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mtext>√</mtext><mn>5</mn></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex"> {φ = \frac{1 + √5}{2}} </annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:1.355em;vertical-align:-0.345em;"></span><span class=mord ><span class="mord mathdefault">φ</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mord ><span class="mopen nulldelimiter"></span><span class=mfrac ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class=pstrut  style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class=pstrut  style="height:3em;"></span><span class=frac-line  style="border-bottom-width:0.04em;"></span></span><span style="top:-3.45em;"><span class=pstrut  style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight">√</span><span class="mord mtight">5</span></span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>, it turned out to be: <span class=katex-display ><span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>φ</mi><mi>n</mi></msup><mo>−</mo><mo stretchy=false >(</mo><mo>−</mo><mi>φ</mi><msup><mo stretchy=false >)</mo><mrow><mo>−</mo><mi>n</mi></mrow></msup></mrow><mrow><mtext>√</mtext><mn>5</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex"> \frac{φ^n - (-φ)^{-n}}{√5} </annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:2.338331em;vertical-align:-0.8900000000000001em;"></span><span class=mord ><span class="mopen nulldelimiter"></span><span class=mfrac ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:1.448331em;"><span style="top:-2.31em;"><span class=pstrut  style="height:3em;"></span><span class=mord ><span class=mord >√</span><span class=mord >5</span></span></span><span style="top:-3.23em;"><span class=pstrut  style="height:3em;"></span><span class=frac-line  style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class=pstrut  style="height:3em;"></span><span class=mord ><span class=mord ><span class="mord mathdefault">φ</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mbin >−</span><span class=mspace  style="margin-right:0.2222222222222222em;"></span><span class=mopen >(</span><span class=mord >−</span><span class="mord mathdefault">φ</span><span class=mclose ><span class=mclose >)</span><span class=msupsub ><span class=vlist-t ><span class=vlist-r ><span class=vlist  style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.8900000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span> <p>You want to share it with the world. You know Julia&#39;s syntax, but not how to turn your function into a package.</p> <h2 id=using_a_template ><a href="#using_a_template">Using a template</a></h2> <p>First, you need a package template. In Julia REPL, type <code>&#93;</code> and then <code>add PkgTemplates</code>. It will install the package that provides you with templates.</p> <p>It also requires you to have <code>user.name</code>, <code>user.email</code> and <code>github.user</code> set in <code>.gitconfig</code>. If those are missing, you can add them like <code>git config --global user.name &quot;username&quot;</code>, executed in your shell.</p> <p>Now you can make your own package &quot;Fibonacci&quot; based on a simple template. In Julia REPL: <pre><code class="julia hljs">julia&gt; <span class=hljs-keyword >using</span> PkgTemplates
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" href="/libs/katex/katex.min.css">
+  
+  
+    <link rel="stylesheet" href="/libs/highlight/github.min.css">
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="icon" href="/assets/picture-32.png">
+
+  <title>Make your Julia package in 10 minutes &middot; Zlatan's Journal</title>
+  <meta name="author" content="Zlatan Vasović">
+  <meta name="description" content="An exploratory journey into interdisciplinary research.">
+  <meta name="keywords" content="zlatan, vasovic, zdroid, github, blog, developer, researcher">
+</head>
+<body> <!-- closed in foot.html -->
+  <div class="container p-md-5 mb-4">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-title font-weight-bold display-4">Zlatan's Journal</h1>
+        <p class="lead">An exploratory journey into interdisciplinary research.</p>
+      </div>
+      <div class="col-md-3 text-md-right">
+        <p><img class="border border-dark" src="/assets/picture.png" alt="A picture of me" width="125"></p>
+      </div>
+    </div>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link " href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/about">About me</a>
+      </li>
+      <li class="nav-item float-md-right">
+        <a class="nav-link" href="https://github.com/zdroid">GitHub</a>
+      </li>
+    </ul>
+    <hr class="bg-primary">
+    <div class="container p-0 mt-5 mb-5">
+      
+        <h1 class="text-title">Make your Julia package in 10 minutes</h1>
+        <h4 class="mb-5 font-weight-light">June 13, 2020</h4>
+      
+
+<!-- Content appended here (in class franklin-content) -->
+<div class="franklin-content"><p>Making a package can be a hassle, but in Julia it doesn&#39;t have to be so. There are some great tools which can help you achieve this task in less than 10 minutes.</p>
+<p>Suppose you came up with the formula to calculate n-th term of the famed Fibonacci series. Using <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mtext>√</mtext><mn>5</mn></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex"> {φ = \frac{1 + √5}{2}} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mord mathdefault">φ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.45em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight">√</span><span class="mord mtight">5</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>, it turned out to be: <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>φ</mi><mi>n</mi></msup><mo>−</mo><mo stretchy="false">(</mo><mo>−</mo><mi>φ</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mi>n</mi></mrow></msup></mrow><mrow><mtext>√</mtext><mn>5</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex"> \frac{φ^n - (-φ)^{-n}}{√5} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.338331em;vertical-align:-0.8900000000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.448331em;"><span style="top:-2.31em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">√</span><span class="mord">5</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">φ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathdefault">φ</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8900000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+<p>You want to share it with the world. You know Julia&#39;s syntax, but not how to turn your function into a package.</p>
+<h2 id="using_a_template"><a href="#using_a_template">Using a template</a></h2>
+<p>First, you need a package template. In Julia REPL, type <code>&#93;</code> and then <code>add PkgTemplates</code>. It will install the package that provides you with templates.</p>
+<p>It also requires you to have <code>user.name</code>, <code>user.email</code> and <code>github.user</code> set in <code>.gitconfig</code>. If those are missing, you can add them like <code>git config --global user.name &quot;username&quot;</code>, executed in your shell.</p>
+<p>Now you can make your own package &quot;Fibonacci&quot; based on a simple template. In Julia REPL: <pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> PkgTemplates
 julia&gt; t = Template()
-julia&gt; t(<span class=hljs-string >&quot;Fibonacci&quot;</span>)</code></pre> Voila&#33; Your package is in <code>~/.julia/dev/Fibonacci</code> &#40;the default location&#41;. Navigate to it. You can see all metafiles like <code>Project.toml</code>, <code>.gitignore</code>, <code>LICENSE</code> and <code>README.md</code> already created.</p> <h2 id=adding_your_function ><a href="#adding_your_function">Adding your function</a></h2> <p>Now onto the fibonacci function. <code>src/Fibonacci.jl</code> is the main file of your package and it looks like this: <pre><code class="julia hljs"><span class=hljs-keyword >module</span> Fibonacci
+julia&gt; t(<span class="hljs-string">&quot;Fibonacci&quot;</span>)</code></pre> Voila&#33; Your package is in <code>~/.julia/dev/Fibonacci</code> &#40;the default location&#41;. Navigate to it. You can see all metafiles like <code>Project.toml</code>, <code>.gitignore</code>, <code>LICENSE</code> and <code>README.md</code> already created.</p>
+<h2 id="adding_your_function"><a href="#adding_your_function">Adding your function</a></h2>
+<p>Now onto the fibonacci function. <code>src/Fibonacci.jl</code> is the main file of your package and it looks like this: <pre><code class="julia hljs"><span class="hljs-keyword">module</span> Fibonacci
 
-<span class=hljs-comment ># Write your package code here.</span>
+<span class="hljs-comment"># Write your package code here.</span>
 
-<span class=hljs-keyword >end</span></code></pre> <code>module Fibonacci</code> indicates your package has its own scope. You want to add <code>fibonacci</code> function into that scope, like this: <pre><code class="julia hljs"><span class=hljs-keyword >module</span> Fibonacci
+<span class="hljs-keyword">end</span></code></pre>
+<code>module Fibonacci</code> indicates your package has its own scope. You want to add <code>fibonacci</code> function into that scope, like this: <pre><code class="julia hljs"><span class="hljs-keyword">module</span> Fibonacci
 
-<span class=hljs-comment ># Write your package code here.</span>
+<span class="hljs-comment"># Write your package code here.</span>
 
-<span class=hljs-keyword >function</span> fibonacci(n)
-    <span class=hljs-literal >φ</span> = (<span class=hljs-number >1</span> + √<span class=hljs-number >5</span>) / <span class=hljs-number >2</span>
-    <span class=hljs-keyword >return</span> round((<span class=hljs-literal >φ</span>^n - (-<span class=hljs-literal >φ</span>)^-n) / √<span class=hljs-number >5</span>)
-<span class=hljs-keyword >end</span>
+<span class="hljs-keyword">function</span> fibonacci(n)
+    <span class="hljs-literal">φ</span> = (<span class="hljs-number">1</span> + √<span class="hljs-number">5</span>) / <span class="hljs-number">2</span>
+    <span class="hljs-keyword">return</span> round((<span class="hljs-literal">φ</span>^n - (-<span class="hljs-literal">φ</span>)^-n) / √<span class="hljs-number">5</span>)
+<span class="hljs-keyword">end</span>
 
-<span class=hljs-keyword >export</span> fibonacci
+<span class="hljs-keyword">export</span> fibonacci
 
-<span class=hljs-keyword >end</span></code></pre> <code>export fibonacci</code> indicates you want the function to be accessible outside the module.</p> <h2 id=using_the_function ><a href="#using_the_function">Using the function</a></h2> <p>Your package needs to be activated first, so that you can use it. Type <code>&#93;</code> and then <code>activate .</code> &#40;the current directory&#41;.</p> <p>Now you can include the function from your package &#40;<code>using Fibonacci</code>&#41; and use it: <pre><code class="julia hljs">julia&gt; <span class=hljs-keyword >using</span> Fibonacci
+<span class="hljs-keyword">end</span></code></pre> <code>export fibonacci</code> indicates you want the function to be accessible outside the module.</p>
+<h2 id="using_the_function"><a href="#using_the_function">Using the function</a></h2>
+<p>Your package needs to be activated first, so that you can use it. Type <code>&#93;</code> and then <code>activate .</code> &#40;the current directory&#41;.</p>
+<p>Now you can include the function from your package &#40;<code>using Fibonacci</code>&#41; and use it: <pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> Fibonacci
 
-julia&gt; fibonacci(<span class=hljs-number >100</span>)
-<span class=hljs-number >6765.0</span></code></pre> <h2 id=adding_tests ><a href="#adding_tests">Adding tests</a></h2> <p>It&#39;s a good practice to make sure your code works by adding tests. Test file is already conventiently created as <code>test/runtests.jl</code>. Tests are scoped inside <code>@testset</code>s and have a <code>@test condition</code> syntax. Let&#39;s add a few tests: <pre><code class="julia hljs"><span class=hljs-keyword >using</span> Fibonacci
-<span class=hljs-keyword >using</span> Test
+julia&gt; fibonacci(<span class="hljs-number">100</span>)
+<span class="hljs-number">6765.0</span></code></pre>
+<h2 id="adding_tests"><a href="#adding_tests">Adding tests</a></h2>
+<p>It&#39;s a good practice to make sure your code works by adding tests. Test file is already conventiently created as <code>test/runtests.jl</code>. Tests are scoped inside <code>@testset</code>s and have a <code>@test condition</code> syntax. Let&#39;s add a few tests: <pre><code class="julia hljs"><span class="hljs-keyword">using</span> Fibonacci
+<span class="hljs-keyword">using</span> Test
 
-<span class=hljs-meta >@testset</span> <span class=hljs-string >&quot;Fibonacci.jl&quot;</span> <span class=hljs-keyword >begin</span>
-    <span class=hljs-comment ># Write your tests here.</span>
+<span class="hljs-meta">@testset</span> <span class="hljs-string">&quot;Fibonacci.jl&quot;</span> <span class="hljs-keyword">begin</span>
+    <span class="hljs-comment"># Write your tests here.</span>
 
-    <span class=hljs-comment ># Here are the tests:</span>
-    <span class=hljs-meta >@test</span> fibonacci(<span class=hljs-number >0</span>) == <span class=hljs-number >0</span>
-    <span class=hljs-meta >@test</span> fibonacci(<span class=hljs-number >3</span>) == <span class=hljs-number >2</span>
-    <span class=hljs-meta >@test</span> fibonacci(<span class=hljs-number >5</span>) == <span class=hljs-number >5</span>
-<span class=hljs-keyword >end</span></code></pre> <p>Running tests is as easy as typing <code>&#93;</code> and then <code>test</code> &#40;assuming you have already done <code>&#93;activate .</code>&#41;. If the tests were successful, you&#39;ll get the following message: <pre><code class="julia hljs">Test Summary: | Pass  Total
-Fibonacci.jl  |    <span class=hljs-number >3</span>      <span class=hljs-number >3</span>
-    Testing Fibonacci tests passed</code></pre> <h2 id=final_word ><a href="#final_word">Final word</a></h2> <p>This is a very simplified version of the process, since it&#39;s done with a template. However, using a template lets you worry not about all the specifics, but about the actual code only.</p> <p>You should definitely try adding more functions to your package, or building another one. Additional template options are explained in <a href="https://github.com/invenia/PkgTemplates.jl#readme">PkgTemplates&#39;s readme</a> and <a href="https://invenia.github.io/PkgTemplates.jl/">its documentation</a>.</p> <p>If you get stuck, you can always post a question on <a href="https://discourse.julialang.org/">Julia Discourse</a> or <a href="https://julialang.slack.com/">Slack</a>.</p> <div class="alert alert-warning" role=alert > Note: writing a blog post about making a Julia package takes more than 10 minutes. </div> </p> </div> </div> <hr> <p class=text-muted > &copy; Zlatan Vasović. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>. <a type="application/rss+xml" href="https://zdroid.github.io/feed.xml">RSS</a> available. </div> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-33643623-2', 'zdroid.github.io'); ga('send', 'pageview'); </script>
+    <span class="hljs-comment"># Here are the tests:</span>
+    <span class="hljs-meta">@test</span> fibonacci(<span class="hljs-number">0</span>) == <span class="hljs-number">0</span>
+    <span class="hljs-meta">@test</span> fibonacci(<span class="hljs-number">3</span>) == <span class="hljs-number">2</span>
+    <span class="hljs-meta">@test</span> fibonacci(<span class="hljs-number">5</span>) == <span class="hljs-number">5</span>
+<span class="hljs-keyword">end</span></code></pre>
+<p>Running tests is as easy as typing <code>&#93;</code> and then <code>test</code> &#40;assuming you have already done <code>&#93;activate .</code>&#41;. If the tests were successful, you&#39;ll get the following message: <pre><code class="julia hljs">Test Summary: | Pass  Total
+Fibonacci.jl  |    <span class="hljs-number">3</span>      <span class="hljs-number">3</span>
+    Testing Fibonacci tests passed</code></pre>
+<h2 id="final_word"><a href="#final_word">Final word</a></h2>
+<p>This is a very simplified version of the process, since it&#39;s done with a template. However, using a template lets you worry not about all the specifics, but about the actual code only.</p>
+<p>You should definitely try adding more functions to your package, or building another one. Additional template options are explained in <a href="https://github.com/invenia/PkgTemplates.jl#readme">PkgTemplates&#39;s readme</a> and <a href="https://invenia.github.io/PkgTemplates.jl/">its documentation</a>.</p>
+<p>If you get stuck, you can always post a question on <a href="https://discourse.julialang.org/">Julia Discourse</a> or <a href="https://julialang.slack.com/">Slack</a>.</p>
+
+<div class="alert alert-warning" role="alert">
+  Note: writing a blog post about making a Julia package takes more than 10 minutes.
+</div>
+</p>
+    </div>
+    </div>
+    <hr>
+    <p class="text-muted">
+      &copy; Zlatan Vasović.
+      Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+      <a type="application/rss+xml" href="https://zdroid.github.io/feed.xml">RSS</a> available.
+    </div><!-- CONTENT ENDS HERE -->
+    
+      
+
+
+
+    
+    
+      
+
+
+    
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-33643623-2', 'zdroid.github.io');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
