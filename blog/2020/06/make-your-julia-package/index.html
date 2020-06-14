@@ -60,7 +60,7 @@
 <p>It also requires you to have <code>user.name</code>, <code>user.email</code> and <code>github.user</code> set in <code>.gitconfig</code>. If those are missing, you can add them like <code>git config --global user.name &quot;username&quot;</code>, executed in your shell.</p>
 <p>Now you can make your own package &quot;Fibonacci&quot; based on a simple template. In Julia REPL: <pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> PkgTemplates
 julia&gt; t = Template()
-julia&gt; t(<span class="hljs-string">&quot;Fibonacci&quot;</span>)</code></pre> Voila&#33; Your package is in <code>~/.julia/dev/Fibonacci</code> &#40;the default location&#41;. Navigate to it. You can see all metafiles like <code>Project.toml</code>, <code>.gitignore</code>, <code>LICENSE</code> and <code>README.md</code> already created.</p>
+julia&gt; t(<span class="hljs-string">&quot;Fibonacci&quot;</span>)</code></pre> Voila&#33; Your package is in <code>~/.julia/dev/Fibonacci</code> &#40;the default location&#41;. Navigate to it. You can see the metafiles like <code>Project.toml</code>, <code>.gitignore</code>, <code>LICENSE</code> and <code>README.md</code> already created.</p>
 <h2 id="adding_your_function"><a href="#adding_your_function">Adding your function</a></h2>
 <p>Now onto the fibonacci function. <code>src/Fibonacci.jl</code> is the main file of your package and it looks like this: <pre><code class="julia hljs"><span class="hljs-keyword">module</span> Fibonacci
 
@@ -86,7 +86,7 @@ julia&gt; t(<span class="hljs-string">&quot;Fibonacci&quot;</span>)</code></pre>
 julia&gt; fibonacci(<span class="hljs-number">100</span>)
 <span class="hljs-number">6765.0</span></code></pre>
 <h2 id="adding_tests"><a href="#adding_tests">Adding tests</a></h2>
-<p>It&#39;s a good practice to make sure your code works by adding tests. Test file is already conventiently created as <code>test/runtests.jl</code>. Tests are scoped inside <code>@testset</code>s and have a <code>@test condition</code> syntax. Let&#39;s add a few tests: <pre><code class="julia hljs"><span class="hljs-keyword">using</span> Fibonacci
+<p>It&#39;s a good practice to make sure your code works by adding tests. Test file is already conveniently created as <code>test/runtests.jl</code>. Tests are scoped inside <code>@testset</code>s and have a <code>@test condition</code> syntax. Let&#39;s add a few tests: <pre><code class="julia hljs"><span class="hljs-keyword">using</span> Fibonacci
 <span class="hljs-keyword">using</span> Test
 
 <span class="hljs-meta">@testset</span> <span class="hljs-string">&quot;Fibonacci.jl&quot;</span> <span class="hljs-keyword">begin</span>
@@ -102,7 +102,7 @@ Fibonacci.jl  |    <span class="hljs-number">3</span>      <span class="hljs-num
     Testing Fibonacci tests passed</code></pre>
 <h2 id="final_word"><a href="#final_word">Final word</a></h2>
 <p>This is a very simplified version of the process, since it&#39;s done with a template. However, using a template lets you worry not about all the specifics, but about the actual code only.</p>
-<p>You should definitely try adding more functions to your package, or building another one. Additional template options are explained in <a href="https://github.com/invenia/PkgTemplates.jl#readme">PkgTemplates&#39;s readme</a> and <a href="https://invenia.github.io/PkgTemplates.jl/">its documentation</a>.</p>
+<p>You should definitely try adding more functions to your package, or building another one. Additional template options are explained in <a href="https://github.com/invenia/PkgTemplates.jl#readme">PkgTemplates readme</a> and <a href="https://invenia.github.io/PkgTemplates.jl/">its documentation</a>.</p>
 <p>If you get stuck, you can always post a question on <a href="https://discourse.julialang.org/">Julia Discourse</a> or <a href="https://julialang.slack.com/">Slack</a>.</p>
 
 <div class="alert alert-warning" role="alert">
