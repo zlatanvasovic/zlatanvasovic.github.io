@@ -37,13 +37,14 @@ function hfun_blogposts()
                 days[i] = day(date)
                 lines[i] =
                     """~~~
-                    <div class="card border-dark mb-3">
+                    <div class="card border-dark mb-4">
                       <div class="card-body">
                         <h4 class="card-title text-title"><a href="$url">$title</a></h5>
                         <p class="card-text">$rss</p>
                         <p class="card-text"><small class="text-muted">$pubdate</small></p>
                       </div>
-                    </div>~~~
+                    </div>
+                    ~~~
                     """
             end
             # sort by day
