@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ if hasmath }}
+    <link rel="stylesheet" href="/libs/katex/katex.min.css">
+  {{ end }}
+  {{ if hascode }}
+    <link rel="stylesheet" href="/libs/highlight/github.min.css">
+  {{ end }}
+  {{ insert style.html }}
+  <title>{{ title }} &middot; {{ website_title }}</title>
+  <meta name="author" content="{{ author }}">
+  <meta name="description" content="{{ website_descr }}">
+  <meta name="keywords" content="{{ website_keywords }}">
+</head>
+<body> <!-- closed in foot.html -->
+{{ insert header.html }}
+<!-- Content appended here (in class franklin-content) -->
