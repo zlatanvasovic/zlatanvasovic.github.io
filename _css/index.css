@@ -24,6 +24,11 @@ h1, h2, h3 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
+h1[id] a,
+h2[id] a {
+  color: #000;
+}
+
 .nav-pills .nav-link {
   border-radius: 0;
 }
