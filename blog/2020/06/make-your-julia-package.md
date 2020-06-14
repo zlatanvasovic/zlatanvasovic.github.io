@@ -29,7 +29,7 @@ julia> t("Fibonacci")
 ```
 Voila! Your package is in `~/.julia/dev/Fibonacci` (the default location).
 Navigate to it.
-You can see all metafiles like `Project.toml`, `.gitignore`, `LICENSE` and `README.md` already created.
+You can see the metafiles like `Project.toml`, `.gitignore`, `LICENSE` and `README.md` already created.
 
 ## Adding your function
 
@@ -50,16 +50,19 @@ module Fibonacci
 
 # Write your package code here.
 
+export fibonacci
+
 function fibonacci(n)
     φ = (1 + √5) / 2
     return round((φ^n - (-φ)^-n) / √5)
 end
 
-export fibonacci
-
 end
 ```
 `export fibonacci` indicates you want the function to be accessible outside the module.
+The exports are usually grouped on top of the module (even before the functions were declared).
+The reasons for that are idiomatic, as in larger module you'll have imports, exports and includes on top of the file.
+Anyone looking at the code could easily tell what is imported and exported in the module.
 
 ## Using the function
 
@@ -77,7 +80,7 @@ julia> fibonacci(100)
 ## Adding tests
 
 It's a good practice to make sure your code works by adding tests.
-Test file is already conventiently created as `test/runtests.jl`.
+Test file is already conveniently created as `test/runtests.jl`.
 Tests are scoped inside `@testset`s and have a `@test condition` syntax.
 Let's add a few tests:
 ```julia
@@ -108,7 +111,7 @@ This is a very simplified version of the process, since it's done with a templat
 However, using a template lets you worry not about all the specifics, but about the actual code only.
 
 You should definitely try adding more functions to your package, or building another one.
-Additional template options are explained in [PkgTemplates's readme](https://github.com/invenia/PkgTemplates.jl#readme) and [its documentation](https://invenia.github.io/PkgTemplates.jl/).
+Additional template options are explained in [PkgTemplates readme](https://github.com/invenia/PkgTemplates.jl#readme) and [its documentation](https://invenia.github.io/PkgTemplates.jl/).
 
 If you get stuck, you can always post a question on [Julia Discourse](https://discourse.julialang.org/) or [Slack](https://julialang.slack.com/).
 
