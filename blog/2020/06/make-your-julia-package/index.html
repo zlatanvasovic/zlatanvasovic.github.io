@@ -20,13 +20,13 @@
   <meta name="keywords" content="zlatan, vasovic, zdroid, github, blog, developer, researcher">
 </head>
 <body> <!-- closed in foot.html -->
-  <div class="container p-md-5 mb-4">
+  <div class="container-lg p-lg-5 mb-4">
     <div class="row">
       <div class="col">
         <h1 class="text-title font-weight-bold display-4">Zlatan's Journal</h1>
         <p class="lead">An exploratory journey into interdisciplinary research.</p>
       </div>
-      <div class="col-md-3 text-md-right">
+      <div class="col-lg-3 text-lg-right">
         <p><img class="border border-dark" src="/assets/picture.png" alt="A picture of me" width="125"></p>
       </div>
     </div>
@@ -45,7 +45,7 @@
       </li>
     </ul>
     <hr class="bg-primary">
-    <div class="container p-0 mt-5 mb-5">
+    <div class="container-fluid p-0 mt-5 mb-5">
       
         <h1 class="text-title">Make your Julia package in 10 minutes</h1>
         <h4 class="mb-5 font-weight-light">June 13, 2020</h4>
@@ -71,14 +71,14 @@ julia&gt; t(<span class="hljs-string">&quot;Fibonacci&quot;</span>)</code></pre>
 
 <span class="hljs-comment"># Write your package code here.</span>
 
+<span class="hljs-keyword">export</span> fibonacci
+
 <span class="hljs-keyword">function</span> fibonacci(n)
     <span class="hljs-literal">φ</span> = (<span class="hljs-number">1</span> + √<span class="hljs-number">5</span>) / <span class="hljs-number">2</span>
     <span class="hljs-keyword">return</span> round((<span class="hljs-literal">φ</span>^n - (-<span class="hljs-literal">φ</span>)^-n) / √<span class="hljs-number">5</span>)
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-keyword">export</span> fibonacci
-
-<span class="hljs-keyword">end</span></code></pre> <code>export fibonacci</code> indicates you want the function to be accessible outside the module.</p>
+<span class="hljs-keyword">end</span></code></pre> <code>export fibonacci</code> indicates you want the function to be accessible outside the module. The exports are usually grouped on top of the module &#40;even before the functions were declared&#41;. The reasons for that are idiomatic, as in larger module you&#39;ll have imports, exports and includes on top of the file. Anyone looking at the code could easily tell what is imported and exported in the module.</p>
 <h2 id="using_the_function"><a href="#using_the_function">Using the function</a></h2>
 <p>Your package needs to be activated first, so that you can use it. Type <code>&#93;</code> and then <code>activate .</code> &#40;the current directory&#41;.</p>
 <p>Now you can include the function from your package &#40;<code>using Fibonacci</code>&#41; and use it: <pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> Fibonacci
