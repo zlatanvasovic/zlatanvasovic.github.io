@@ -73,7 +73,7 @@ Now you can include the function from your package (`using Fibonacci`) and use i
 ```julia
 julia> using Fibonacci
 
-julia> fibonacci(100)
+julia> fibonacci(20)
 6765.0
 ```
 
@@ -103,6 +103,40 @@ If the tests were successful, you'll get the following message:
 Test Summary: | Pass  Total
 Fibonacci.jl  |    3      3
     Testing Fibonacci tests passed
+```
+
+## Adding dependencies
+
+This is an optional section, since your package and its tests are already done.
+
+As the package grows, you'll want to use some other packages to help you build your package.
+Those are called dependencies and you add them by typing `]` and then `add PackageName`.
+You have to make sure you did `]activate .` first (like in the previous section).
+`Project.toml` and `Manifest.toml` will be updated automatically after adding your dependencies,
+so you shouldn't edit them for this purpose.
+
+Let's add `Combinatorics`, which already has a Fibonacci function named `fibonaccinum`.
+After adding it, you can use `fibonaccinum` in `src/Fibonacci.jl` (don't forget `using Combinatorics`):
+
+```julia
+module Fibonacci
+
+# Write your package code here.
+
+using Combinatorics
+
+export fibonacci, anotherfibonacci
+
+function fibonacci(n)
+    φ = (1 + √5) / 2
+    return round((φ^n - (-φ)^-n) / √5)
+end
+
+function anotherfibonacci(n)
+    return fibonaccinum(n)
+end
+
+end
 ```
 
 ## Final word
