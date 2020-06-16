@@ -83,7 +83,7 @@ julia&gt; t(<span class="hljs-string">&quot;Fibonacci&quot;</span>)</code></pre>
 <p>Your package needs to be activated first, so that you can use it. Type <code>&#93;</code> and then <code>activate .</code> &#40;the current directory&#41;.</p>
 <p>Now you can include the function from your package &#40;<code>using Fibonacci</code>&#41; and use it: <pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> Fibonacci
 
-julia&gt; fibonacci(<span class="hljs-number">100</span>)
+julia&gt; fibonacci(<span class="hljs-number">20</span>)
 <span class="hljs-number">6765.0</span></code></pre>
 <h2 id="adding_tests"><a href="#adding_tests">Adding tests</a></h2>
 <p>It&#39;s a good practice to make sure your code works by adding tests. Test file is already conveniently created as <code>test/runtests.jl</code>. Tests are scoped inside <code>@testset</code>s and have a <code>@test condition</code> syntax. Let&#39;s add a few tests: <pre><code class="julia hljs"><span class="hljs-keyword">using</span> Fibonacci
@@ -100,6 +100,28 @@ julia&gt; fibonacci(<span class="hljs-number">100</span>)
 <p>Running tests is as easy as typing <code>&#93;</code> and then <code>test</code> &#40;assuming you have already done <code>&#93;activate .</code>&#41;. If the tests were successful, you&#39;ll get the following message: <pre><code class="julia hljs">Test Summary: | Pass  Total
 Fibonacci.jl  |    <span class="hljs-number">3</span>      <span class="hljs-number">3</span>
     Testing Fibonacci tests passed</code></pre>
+<h2 id="adding_dependencies"><a href="#adding_dependencies">Adding dependencies</a></h2>
+<p>This is an optional section, since your package and its tests have already been made.</p>
+<p>As the package grows, you&#39;ll want to use some other packages to help you build your package. Those are called dependencies and you add them by typing <code>&#93;</code> and then <code>add PackageName</code>. You have to make sure you did <code>&#93;activate .</code> first &#40;like in the previous section&#41;. <code>Project.toml</code> and <code>Manifest.toml</code> will be updated automatically after adding your dependency, so you shouldn&#39;t edit them for this purpose.</p>
+<p>Let&#39;s add <code>Combinatorics</code>, which already has a Fibonacci function named <code>fibonaccinum</code>. After adding it, you can use <code>fibonaccinum</code> in <code>src/Fibonacci.jl</code> &#40;don&#39;t forget <code>using Combinatorics</code>&#41;:</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">module</span> Fibonacci
+
+<span class="hljs-comment"># Write your package code here.</span>
+
+<span class="hljs-keyword">using</span> Combinatorics
+
+<span class="hljs-keyword">export</span> fibonacci, anotherfibonacci
+
+<span class="hljs-keyword">function</span> fibonacci(n)
+    <span class="hljs-literal">φ</span> = (<span class="hljs-number">1</span> + √<span class="hljs-number">5</span>) / <span class="hljs-number">2</span>
+    <span class="hljs-keyword">return</span> round((<span class="hljs-literal">φ</span>^n - (-<span class="hljs-literal">φ</span>)^-n) / √<span class="hljs-number">5</span>)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">function</span> anotherfibonacci(n)
+    <span class="hljs-keyword">return</span> fibonaccinum(n)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span></code></pre>
 <h2 id="final_word"><a href="#final_word">Final word</a></h2>
 <p>This is a very simplified version of the process, since it&#39;s done with a template. However, using a template lets you worry not about all the specifics, but about the actual code only.</p>
 <p>You should definitely try adding more functions to your package, or building another one. Additional template options are explained in <a href="https://github.com/invenia/PkgTemplates.jl#readme">PkgTemplates readme</a> and <a href="https://invenia.github.io/PkgTemplates.jl/">its documentation</a>.</p>
