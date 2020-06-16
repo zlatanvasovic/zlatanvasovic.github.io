@@ -101,8 +101,8 @@ julia&gt; fibonacci(<span class="hljs-number">20</span>)
 Fibonacci.jl  |    <span class="hljs-number">3</span>      <span class="hljs-number">3</span>
     Testing Fibonacci tests passed</code></pre>
 <h2 id="adding_dependencies"><a href="#adding_dependencies">Adding dependencies</a></h2>
-<p>This is an optional section, since your package and its tests have already been made.</p>
-<p>As the package grows, you&#39;ll want to use some other packages to help you build your package. Those are called dependencies and you add them by typing <code>&#93;</code> and then <code>add PackageName</code>. You have to make sure you did <code>&#93;activate .</code> first &#40;like in the previous section&#41;. <code>Project.toml</code> and <code>Manifest.toml</code> will be updated automatically after adding your dependency, so you shouldn&#39;t edit them for this purpose.</p>
+<p>This is an optional section, since your package and its tests are already done.</p>
+<p>As the package grows, you&#39;ll want to use some other packages to help you build your package. Those are called dependencies and you add them by typing <code>&#93;</code> and then <code>add PackageName</code>. You have to make sure you did <code>&#93;activate .</code> first &#40;like in the previous section&#41;. <code>Project.toml</code> and <code>Manifest.toml</code> will be updated automatically after adding your dependencies, so you shouldn&#39;t edit them for this purpose.</p>
 <p>Let&#39;s add <code>Combinatorics</code>, which already has a Fibonacci function named <code>fibonaccinum</code>. After adding it, you can use <code>fibonaccinum</code> in <code>src/Fibonacci.jl</code> &#40;don&#39;t forget <code>using Combinatorics</code>&#41;:</p>
 <pre><code class="julia hljs"><span class="hljs-keyword">module</span> Fibonacci
 
