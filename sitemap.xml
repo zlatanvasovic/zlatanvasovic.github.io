@@ -2,9 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zdroid.github.io/mistype</loc>
+  </url>
+  <url>
     <loc>https://zdroid.github.io/droid</loc>
+  </url>
+  <url>
     <loc>https://zdroid.github.io/projects/</loc>
+  </url>
+  <url>
     <loc>https://zdroid.github.io/about/</loc>
+  </url>
+  <url>
     <loc>https://zdroid.github.io/blog/2020/06/make-your-julia-package/</loc>
   </url>
 </urlset>
