@@ -7,8 +7,8 @@ Making a package can be a hassle, but in Julia it doesn't have to be so.
 There are some great tools which can help you achieve this task in less than 10 minutes.
 
 Suppose you came up with the formula to calculate n-th term of the famed Fibonacci series.
-Using $ {φ = \frac{1 + √5}{2}} $, it turned out to be:
-$$ \frac{φ^n - (-φ)^{-n}}{√5} $$
+Using $ {\varphi = \frac{1 + \sqrt{5}}{2}} $, it turned out to be:
+$$ \frac{\varphi^n - (-\varphi)^{-n}}{\sqrt{5}} $$
 
 You want to share it with the world.
 You know Julia's syntax, but not how to turn your function into a package.
