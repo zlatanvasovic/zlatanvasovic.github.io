@@ -12,7 +12,7 @@
   {{ insert style.html }}
   <title>{{ title }} &middot; {{ website_title }}</title>
   <meta name="author" content="{{ author }}">
-  <meta name="description" content="{{ website_descr }} Created by {{ author }}.">
+  <meta name="description" content="{{ ifdef rss }}{{ rss }} &mdash; {{ end }}{{ website_descr }} Created by {{ author }}.">
   <meta name="keywords" content="{{ website_keywords }}">
 </head>
 <body> <!-- closed in foot.html -->
