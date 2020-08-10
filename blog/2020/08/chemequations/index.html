@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+    <link rel="stylesheet" href="/libs/highlight/github.min.css">
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="icon" href="/assets/picture-32.png">
+
+  <title>New package: ChemEquations.jl &middot; Zlatan's Journal</title>
+  <meta name="author" content="Zlatan Vasović">
+  <meta name="description" content="Write and balance chemical equations elegantly and efficiently. &mdash; An exploratory journey into interdisciplinary research. Created by Zlatan Vasović.">
+  <meta name="keywords" content="zlatan, vasovic, zdroid, github, blog, developer, researcher">
+</head>
+<body> <!-- closed in foot.html -->
+  <div class="container-lg p-lg-5 mb-4">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-title font-weight-bold display-4">Zlatan's Journal</h1>
+        <p class="lead">An exploratory journey into interdisciplinary research.</p>
+      </div>
+      <div class="col-lg-3 text-lg-right">
+        <p><img class="border border-dark" src="/assets/picture.png" alt="A picture of me" width="125"></p>
+      </div>
+    </div>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link " href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/about">About me</a>
+      </li>
+      <li class="nav-item float-md-right">
+        <a class="nav-link" href="https://github.com/zdroid">GitHub</a>
+      </li>
+    </ul>
+    <hr class="bg-primary">
+    <div class="container-fluid p-0 mt-5 mb-5">
+      
+        <h1 class="text-title">New package: ChemEquations.jl</h1>
+        <h4 class="mb-5 font-weight-light">August 10, 2020</h4>
+      
+
+<!-- Content appended here (in class franklin-content) -->
+<div class="franklin-content"><p>There are already many tools for balancing chemical equations, such as <a href="https://www.webqc.org/balance.php">Balance Chemical Equation</a> at webqc.org. They do a great job, but they have several limitations. Internet connection is required to use them, while it&#39;s impossible to obtain the results programmatically, via an API. Support for custom input is also limited.</p>
+<p>That&#39;s why I wanted to build a Julia package for writing and balancing chemical equations. Named <strong>ChemEquations.jl</strong>, it&#39;s a seemingly simple tool, yet useful for more complicated work. You can install the package by pressing <code>&#93;</code> in Julia REPL and typing:</p>
+<pre><code class="julia hljs">add ChemEquations</code></pre>
+<p>It&#39;s available on <a href="https://github.com/zdroid/ChemEquations.jl">GitHub</a>. If you want to see the documentation, just click a button: <a href="https://zdroid.github.io/ChemEquations.jl/stable/"><img src="https://img.shields.io/badge/docs-stable-blue.svg" alt="Stable" /></a> <a href="https://zdroid.github.io/ChemEquations.jl/dev/"><img src="https://img.shields.io/badge/docs-dev-blue.svg" alt="Dev" /></a>.</p>
+<h2 id="textbook_examples"><a href="#textbook_examples">Textbook examples</a></h2>
+<p>Equations can be written conveniently, with various forms supported. The easiest way to write them is as strings with <code>ce</code> prefix &#40;<strong>c</strong>hemical <strong>e</strong>quation&#41;, similar to <code>r</code> prefix for regex in Julia.</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> equation = <span class="hljs-string">ce&quot;Fe + Cl2 = FeCl3&quot;</span>
+</span>Fe + Cl2 = FeCl3
+
+<span class="hljs-meta">julia&gt;</span><span class="julia"> balance(equation)
+</span>2 Fe + 3 Cl2 = 2 FeCl3</code></pre>
+<p>Parsing the input is insensitive to whitespace and to state symbols &#40;<code>&#40;s&#41;</code>, <code>&#40;l&#41;</code>, <code>&#40;g&#41;</code>, <code>&#40;aq&#41;</code>&#41;, so you don&#39;t have to be pedantic if you don&#39;t want to.</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> balance(<span class="hljs-string">ce&quot;KMnO4+ HCl = KCl+MnCl2 +H2O + Cl2&quot;</span>)
+</span>2 KMnO4 + 16 HCl = 2 KCl + 2 MnCl2 + 8 H2O + 5 Cl2
+
+<span class="hljs-meta">julia&gt;</span><span class="julia"> balance(<span class="hljs-string">ce&quot;Zn(s) + O2(g) = ZnO(s)&quot;</span>)
+</span>2 Zn + O2 = 2 ZnO</code></pre>
+<p>Parentheses &#40;<code>&#40;&#41;</code>&#41;, compounds written with <code>*</code> and electrical charges are all supported. Electron will be recognized if you write <code>e</code>, <code>&#123;-&#125;</code>, <code>&#123;-1&#125;</code> or <code>&#123;1-&#125;</code>. Charge is also supposed to be in any of those forms.</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> balance(<span class="hljs-string">ce&quot;K4Fe(CN)6 + H2SO4 + H2O = K2SO4 + FeSO4 + (NH4)2SO4 + CO&quot;</span>)
+</span>K4FeC6N6 + 6 H2SO4 + 6 H2O = 2 K2SO4 + FeSO4 + 3 N2H8SO4 + 6 CO
+
+<span class="hljs-meta">julia&gt;</span><span class="julia"> balance(<span class="hljs-string">ce&quot;Cr2O7{-2} + H{+} + {-} = Cr{+3} + H2O&quot;</span>)
+</span>Cr2O7{-2} + 14 H{+} + 6 e = 2 Cr{+3} + 7 H2O
+
+<span class="hljs-meta">julia&gt;</span><span class="julia"> balance(<span class="hljs-string">ce&quot;CuSO4*5H2O = CuSO4 + H2O&quot;</span>)
+</span>CuSO9H10 = CuSO4 + 5 H2O</code></pre>
+<p>Even the hardest exercises are in the reach:</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> balance(<span class="hljs-string">ce&quot;K4Fe(CN)6 + KMnO4 + H2SO4 = KHSO4 + Fe2(SO4)3 + MnSO4 + HNO3 + CO2 + H2O&quot;</span>)
+</span>10 K4FeC6N6 + 122 KMnO4 + 299 H2SO4 = 162 KHSO4 + 5 Fe2S3O12 + 122 MnSO4 + 60 HNO3 + 60 CO2 + 188 H2O</code></pre>
+<h2 id="how_is_it_different"><a href="#how_is_it_different">How is it different</a></h2>
+<p>Parsing doesn&#39;t stop at chemical equations. The package also supports writing compounds, independent of an equation. The syntax is similar, just with <code>cc</code> prefix &#40;<strong>c</strong>hemical <strong>c</strong>ompound&#41; instead of <code>ce</code>.</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-string">cc&quot;CuSO4*5H2O&quot;</span>
+</span>CuSO9H10
+
+<span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-string">cc&quot;H3O{+1}&quot;</span>
+</span>H3O{+}</code></pre>
+<p>You can compare two compounds written in different forms:</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-string">cc&quot;CH3CH2CH2CH2CH2OH&quot;</span> == <span class="hljs-string">cc&quot;C5H12O&quot;</span>
+</span>true</code></pre>
+<p>Using a different equals sign &#40;e.g. <code>⟺</code>, <code>≔</code>, <code>⟼</code>, <code>⟻</code>&#41; is also possible:</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-string">ce&quot;N2+O2⇌2NO&quot;</span>
+</span>N2 + O2 = 2 NO
+
+<span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-string">ce&quot;H2 + O2 → H2O&quot;</span>
+</span>H2 + O2 = H2O</code></pre>
+<p>Are two chemical equations identical? Let&#39;s find out:</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-string">ce&quot;CH3CH2OH + O2 = CO2 + HOH&quot;</span> == <span class="hljs-string">ce&quot;C2H5OH + O2 → H2O + CO2&quot;</span>
+</span>true</code></pre>
+
+<div class="alert alert-info" role="alert">
+  The syntax flexibility comes at no additional costs.
+</div>
+
+<h2 id="using_unicode_characters"><a href="#using_unicode_characters">Using unicode characters</a></h2>
+<p>All unicode characters that are letters &#40;such as α and β&#41; or symbols &#40;such as × and ÷&#41; are supported in the input. That allows some exotic examples:</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-string">ce&quot;Σ{+1} + Θ{-1} = Θ2 + Σ2&quot;</span>
+</span>Σ{+} + Θ{-} = Θ2 + Σ2</code></pre>
+<p>This works because compounds are parsed by elements, where an element begins with an uppercase unicode letter and ends with a lowercase unicode letter or a unicode symbol.</p>
+
+<div class="alert alert-info" role="alert">
+  An element can also begin with a symbol if
+    the symbol is the first character (e.g. <code>"⬡H"</code>).
+</div>
+
+<p>It&#39;s even more interesting to use unicode symbols that resemble chemical symbols. Examples of those are ⎔ &#40;<code>\hexagon</code>&#41;, ⬡ &#40;<code>varhexagon</code>&#41;, ⬢ &#40;<code>\varhexagonblack</code>&#41;, ⌬ &#40;<code>\varhexagonlrbonds</code>&#41; and ⏣ &#40;<code>\benzenr</code>&#41;.</p>
+<p>Unicode input allows writing some equations very nicely:</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-string">ce&quot;⏣H + Cl2 = ⏣Cl + HCl&quot;</span>
+</span>⏣H + Cl2 = ⏣Cl + HCl
+
+<span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-string">ce&quot;C + α = O + γ&quot;</span> <span class="hljs-comment"># a reaction from triple-α process</span>
+</span>C + α = O + γ</code></pre>
+<h2 id="non-integer_coefficients"><a href="#non-integer_coefficients">Non-integer coefficients</a></h2>
+<p>Sometimes coefficients in a chemical equation are written as fractions or decimals.</p>
+<p>To initialize such equation, you need to specify the appropriate Julia type for the coefficients. <code>Rational</code> or <code>Rational&#123;Int&#125;</code> is appropriate for exact fractions, while <code>Float64</code> is appropriate for decimals.</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> ChemEquation{<span class="hljs-built_in">Rational</span>}(<span class="hljs-string">&quot;1//2 H2 + 1//2 Cl2 → HCl&quot;</span>)
+</span>1//2 H2 + 1//2 Cl2 = HCl
+
+<span class="hljs-meta">julia&gt;</span><span class="julia"> ChemEquation{<span class="hljs-built_in">Float64</span>}(<span class="hljs-string">&quot;0.5 H2 + 0.5 Cl2 = HCl&quot;</span>)
+</span>0.5 H2 + 0.5 Cl2 = HCl</code></pre>
+<p>Previous two examples are equivalent &#40;test it with <code>&#61;&#61;</code>&#33;&#41;, thanks to the way that numbers are stored in Julia.</p>
+<p>You can also initialize the equation normally:</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> eq = <span class="hljs-string">ce&quot;H2 + Cl2 → HCl&quot;</span>
+</span>H2 + Cl2 = HCl</code></pre>
+<p>and then choose to balance it with rational fractions as coefficients:</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> balance(eq, fractions=<span class="hljs-literal">true</span>)
+</span>1//2 H2 + 1//2 Cl2 = HCl</code></pre>
+<h2 id="behind_the_scenes"><a href="#behind_the_scenes">Behind the scenes</a></h2>
+<p>A chemical equation is stored as <code>ChemEquation</code> struct, which just contains a vector of tuples that represent the compounds and their coefficients. A <code>Compound</code> is also a struct, but it contains charge and a vector of tuples that represent the elements and their coefficients. You can explore the internals of those structures further with Julia&#39;s <code>dump</code>.</p>
+<p>There are helper functions that operate on those structs, such as <code>hascharge</code>, <code>elements</code> and <code>compounds</code>, whose use you can guess by their name &#40;try them&#33;&#41;.</p>
+<p>Balancing the equations is based on <a href="https://arxiv.org/ftp/arxiv/papers/1110/1110.4321.pdf">Thorne &#40;2009&#41;</a>, with slight modifications. The paper suggests constructing an equation matrix and then balancing it using the nullspace method.</p>
+<p>In an equation matrix, rows correspond to atoms and columns correspond to compounds. <code>equationmatrix</code> method calculates it:</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> equationmatrix(<span class="hljs-string">ce&quot;H2 + Cl2 → HCl&quot;</span>)
+</span>2×3 Array{Int64,2}:
+ 2  0  1
+ 0  2  1</code></pre>
+<p>It is then used by <code>balancematrix</code> to obtain the balanced coefficients exactly:</p>
+<pre><code class="julia hljs">julia&gt; balancematrix(<span class="hljs-string">ce&quot;H2 + Cl2 → HCl&quot;</span>)
+<span class="hljs-number">3</span>×<span class="hljs-number">1</span> <span class="hljs-built_in">Array</span>{<span class="hljs-built_in">Rational</span>{<span class="hljs-built_in">BigInt</span>},<span class="hljs-number">2</span>}:
+  <span class="hljs-number">1</span>//<span class="hljs-number">1</span>
+  <span class="hljs-number">1</span>//<span class="hljs-number">1</span>
+ -<span class="hljs-number">2</span>//<span class="hljs-number">1</span></code></pre>
+<p><a href="https://github.com/scheinerman/LinearAlgebraX.jl">LinearAlgebraX</a> is used for that, as it gives exact solutions for integers and rationals. The result is a matrix which represents the nullspace of the system. It is further analyzed:</p>
+<ol>
+<li><p>If the matrix has no rows, there are no solutions.</p>
+</li>
+<li><p>If there is only one row, there is a unique solution.</p>
+</li>
+<li><p>If there is more than one row, the equation can be balanced in infinitely many ways. This usually happens if the equation is a combination of two different equations.</p>
+</li>
+</ol>
+<p>And then the results are constructed into a <code>ChemEquation</code> with <code>balance</code> method.</p>
+<h2 id="whats_planned_for_the_future"><a href="#whats_planned_for_the_future">What&#39;s planned for the future</a></h2>
+<ul>
+<li><p>stoichiometric calculations</p>
+</li>
+<li><p>customization of the display format</p>
+</li>
+<li><p>integration with <a href="https://github.com/SciML/Catalyst.jl">Catalyst.jl</a> and <a href="https://github.com/korsbo/Latexify.jl">Latexify.jl</a></p>
+</li>
+</ul>
+<p>Have any ideas? <a href="https://github.com/zdroid/ChemEquations.jl/issues">Open an issue</a>, or contact me directly&#33;</p>
+    </div>
+    </div>
+    <hr>
+    <p class="text-muted">
+      &copy; Zlatan Vasović.
+      Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+      <a type="application/rss+xml" href="/feed.xml">RSS</a> available.
+    </p>
+</div><!-- CONTENT ENDS HERE -->
+    
+    
+      
+
+
+    
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-33643623-2', 'zdroid.github.io');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

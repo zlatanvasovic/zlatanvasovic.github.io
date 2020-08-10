@@ -64,7 +64,8 @@ c5.3,-9.3,12,-14,20,-14
 H400000v40H845.2724
 s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
 c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
-M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.12715500000000002em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>, it turned out to be: <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>φ</mi><mi>n</mi></msup><mo>−</mo><mo stretchy="false">(</mo><mo>−</mo><mi>φ</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mi>n</mi></mrow></msup></mrow><msqrt><mn>5</mn></msqrt></mfrac></mrow><annotation encoding="application/x-tex"> \frac{\varphi^n - (-\varphi)^{-n}}{\sqrt{5}} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.378331em;vertical-align:-0.93em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.448331em;"><span style="top:-2.2027799999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.90722em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">5</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.12715500000000002em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>, it turned out to be:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>φ</mi><mi>n</mi></msup><mo>−</mo><mo stretchy="false">(</mo><mo>−</mo><mi>φ</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mi>n</mi></mrow></msup></mrow><msqrt><mn>5</mn></msqrt></mfrac></mrow><annotation encoding="application/x-tex"> \frac{\varphi^n - (-\varphi)^{-n}}{\sqrt{5}} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.378331em;vertical-align:-0.93em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.448331em;"><span style="top:-2.2027799999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.90722em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">5</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
 c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
 c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
 c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
@@ -80,16 +81,20 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 <h2 id="using_a_template"><a href="#using_a_template">Using a template</a></h2>
 <p>First, you need a package template. In Julia REPL, type <code>&#93;</code> and then <code>add PkgTemplates</code>. It will install the package that provides you with templates.</p>
 <p>It also requires you to have <code>user.name</code>, <code>user.email</code> and <code>github.user</code> set in <code>.gitconfig</code>. If those are missing, you can add them like <code>git config --global user.name &quot;username&quot;</code>, executed in your shell.</p>
-<p>Now you can make your own package &quot;Fibonacci&quot; based on a simple template. In Julia REPL: <pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> PkgTemplates
+<p>Now you can make your own package &quot;Fibonacci&quot; based on a simple template. In Julia REPL:</p>
+<pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> PkgTemplates
 julia&gt; t = Template()
-julia&gt; t(<span class="hljs-string">&quot;Fibonacci&quot;</span>)</code></pre> Voila&#33; Your package is in <code>~/.julia/dev/Fibonacci</code> &#40;the default location&#41;. Navigate to it. You can see the metafiles like <code>Project.toml</code>, <code>.gitignore</code>, <code>LICENSE</code> and <code>README.md</code> already created.</p>
+julia&gt; t(<span class="hljs-string">&quot;Fibonacci&quot;</span>)</code></pre>
+<p>Voila&#33; Your package is in <code>~/.julia/dev/Fibonacci</code> &#40;the default location&#41;. Navigate to it. You can see the metafiles like <code>Project.toml</code>, <code>.gitignore</code>, <code>LICENSE</code> and <code>README.md</code> already created.</p>
 <h2 id="adding_your_function"><a href="#adding_your_function">Adding your function</a></h2>
-<p>Now onto the fibonacci function. <code>src/Fibonacci.jl</code> is the main file of your package and it looks like this: <pre><code class="julia hljs"><span class="hljs-keyword">module</span> Fibonacci
+<p>Now onto the fibonacci function. <code>src/Fibonacci.jl</code> is the main file of your package and it looks like this:</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">module</span> Fibonacci
 
 <span class="hljs-comment"># Write your package code here.</span>
 
 <span class="hljs-keyword">end</span></code></pre>
-<code>module Fibonacci</code> indicates your package has its own scope. You want to add <code>fibonacci</code> function into that scope, like this: <pre><code class="julia hljs"><span class="hljs-keyword">module</span> Fibonacci
+<p><code>module Fibonacci</code> indicates your package has its own scope. You want to add <code>fibonacci</code> function into that scope, like this:</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">module</span> Fibonacci
 
 <span class="hljs-comment"># Write your package code here.</span>
 
@@ -100,15 +105,18 @@ julia&gt; t(<span class="hljs-string">&quot;Fibonacci&quot;</span>)</code></pre>
     <span class="hljs-keyword">return</span> round((<span class="hljs-literal">φ</span>^n - (-<span class="hljs-literal">φ</span>)^-n) / √<span class="hljs-number">5</span>)
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-keyword">end</span></code></pre> <code>export fibonacci</code> indicates you want the function to be accessible outside the module. The exports are usually grouped on top of the module &#40;even before the functions were declared&#41;. The reasons for that are idiomatic, as in larger module you&#39;ll have imports, exports and includes on top of the file. Anyone looking at the code could easily tell what is imported and exported in the module.</p>
+<span class="hljs-keyword">end</span></code></pre>
+<p><code>export fibonacci</code> indicates you want the function to be accessible outside the module. The exports are usually grouped on top of the module &#40;even before the functions were declared&#41;. The reasons for that are idiomatic, as in larger module you&#39;ll have imports, exports and includes on top of the file. Anyone looking at the code could easily tell what is imported and exported in the module.</p>
 <h2 id="using_the_function"><a href="#using_the_function">Using the function</a></h2>
 <p>Your package needs to be activated first, so that you can use it. Type <code>&#93;</code> and then <code>activate .</code> &#40;the current directory&#41;.</p>
-<p>Now you can include the function from your package &#40;<code>using Fibonacci</code>&#41; and use it: <pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> Fibonacci
+<p>Now you can include the function from your package &#40;<code>using Fibonacci</code>&#41; and use it:</p>
+<pre><code class="julia hljs">julia&gt; <span class="hljs-keyword">using</span> Fibonacci
 
 julia&gt; fibonacci(<span class="hljs-number">20</span>)
 <span class="hljs-number">6765.0</span></code></pre>
 <h2 id="adding_tests"><a href="#adding_tests">Adding tests</a></h2>
-<p>It&#39;s a good practice to make sure your code works by adding tests. Test file is already conveniently created as <code>test/runtests.jl</code>. Tests are scoped inside <code>@testset</code>s and have a <code>@test condition</code> syntax. Let&#39;s add a few tests: <pre><code class="julia hljs"><span class="hljs-keyword">using</span> Fibonacci
+<p>It&#39;s a good practice to make sure your code works by adding tests. Test file is already conveniently created as <code>test/runtests.jl</code>. Tests are scoped inside <code>@testset</code>s and have a <code>@test condition</code> syntax. Let&#39;s add a few tests:</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Fibonacci
 <span class="hljs-keyword">using</span> Test
 
 <span class="hljs-meta">@testset</span> <span class="hljs-string">&quot;Fibonacci.jl&quot;</span> <span class="hljs-keyword">begin</span>
@@ -119,7 +127,8 @@ julia&gt; fibonacci(<span class="hljs-number">20</span>)
     <span class="hljs-meta">@test</span> fibonacci(<span class="hljs-number">3</span>) == <span class="hljs-number">2</span>
     <span class="hljs-meta">@test</span> fibonacci(<span class="hljs-number">5</span>) == <span class="hljs-number">5</span>
 <span class="hljs-keyword">end</span></code></pre>
-<p>Running tests is as easy as typing <code>&#93;</code> and then <code>test</code> &#40;assuming you have already done <code>&#93;activate .</code>&#41;. If the tests were successful, you&#39;ll get the following message: <pre><code class="julia hljs">Test Summary: | Pass  Total
+<p>Running tests is as easy as typing <code>&#93;</code> and then <code>test</code> &#40;assuming you have already done <code>&#93;activate .</code>&#41;. If the tests were successful, you&#39;ll get the following message:</p>
+<pre><code class="julia hljs">Test Summary: | Pass  Total
 Fibonacci.jl  |    <span class="hljs-number">3</span>      <span class="hljs-number">3</span>
     Testing Fibonacci tests passed</code></pre>
 <h2 id="adding_dependencies"><a href="#adding_dependencies">Adding dependencies</a></h2>
@@ -152,7 +161,7 @@ Fibonacci.jl  |    <span class="hljs-number">3</span>      <span class="hljs-num
 <div class="alert alert-warning" role="alert">
   Note: writing a blog post about making a Julia package takes more than 10 minutes.
 </div>
-</p>
+
     </div>
     </div>
     <hr>
@@ -160,7 +169,8 @@ Fibonacci.jl  |    <span class="hljs-number">3</span>      <span class="hljs-num
       &copy; Zlatan Vasović.
       Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
       <a type="application/rss+xml" href="/feed.xml">RSS</a> available.
-    </div><!-- CONTENT ENDS HERE -->
+    </p>
+</div><!-- CONTENT ENDS HERE -->
     
       
 

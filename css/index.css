@@ -36,6 +36,11 @@ h2[id] a {
   margin-top: 0;
 }
 
+.card-columns > p,
+li > p {
+  margin: 0;
+}
+
 @media (min-width: 576px) {
   .card-columns {
     column-count: 2;
