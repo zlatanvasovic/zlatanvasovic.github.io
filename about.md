@@ -1,8 +1,8 @@
 @def title="About me"
 
-I'm a young developer and researcher.
+I'm a young researcher and developer.
 Software development is my passion, as I've been involved in it since 2012.
-Currently, my main programming interests are **Julia**, **C++** and **Python**.
+Currently, my main programming interest is **[Julia](https://julialang.org)**, a modern language for technical computing.
 You can see my own repositories and the repositories that I contributed to on **[GitHub](https://github.com/zdroid)**.
 
 Science is the other side of my coin.
