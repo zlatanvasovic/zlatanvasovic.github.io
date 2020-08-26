@@ -1,53 +1,46 @@
 using Dates
 
-function hfun_m1fill(vname)
-    var = vname[1]
-    return pagevar("index", var)
-end
-
-function lx_baz(com, _)
-    # keep this first line
-    brace_content = Franklin.content(com.braces[1]) # input string
-    # do whatever you want here
-    return uppercase(brace_content)
+function hfun_datetext(date=locvar("rss_pubdate"))
+    datetext = "$(monthname(date)) $(day(date)), $(year(date))"
+    return datetext
 end
 
 # Based on https://github.com/JuliaLang/www.julialang.org/blob/master/utils.jl
 function hfun_blogposts()
-    curyear = Dates.Year(Dates.today()).value
+    curyear = year(Dates.today())
     io = IOBuffer()
     for year in curyear:-1:2020
         ys = "$year"
-        year < curyear && write(io, "\n**$year**\n")
         for month in 12:-1:1
-            ms = "0"^(1-div(month, 10)) * "$month"
+            ms = "0"^(month < 10) * "$month"
             base = joinpath("blog", ys, ms)
             isdir(base) || continue
             posts = filter!(p -> endswith(p, ".md"), readdir(base))
-            days    = zeros(Int, length(posts))
+            days = zeros(Int, length(posts))
             lines = Vector{String}(undef, length(posts))
             for (i, post) in enumerate(posts)
-                ps    = splitext(post)[1]
+                ps = splitext(post)[1]
                 url = "/blog/$ys/$ms/$ps/"
                 surl = strip(url, '/')
                 title = pagevar(surl, :title)
-                pubdate = pagevar(surl, :published)
                 rss = pagevar(surl, :rss)
-                date = Date(pubdate, dateformat"U d, Y")
+                date = pagevar(surl, :rss_pubdate)
+                datetext = hfun_datetext(date)
                 days[i] = day(date)
                 lines[i] =
-                    """~~~
+                    """
+                    ~~~
                     <div class="card border-dark mb-4">
                       <div class="card-body">
-                        <h4 class="card-title text-title"><a href="$url">$title</a></h5>
+                        <h4 class="card-title"><a href="$url">$title</a></h5>
                         <p class="card-text">$rss</p>
-                        <p class="card-text"><small class="text-muted">$pubdate</small></p>
+                        <p class="card-text"><small class="text-muted">$datetext</small></p>
                       </div>
                     </div>
                     ~~~
                     """
             end
-            # sort by day
+            # Sort by day
             foreach(line -> write(io, line), lines[sortperm(days, rev=true)])
         end
     end
