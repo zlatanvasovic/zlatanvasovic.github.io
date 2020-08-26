@@ -3,11 +3,12 @@
 I'm a young researcher and developer.
 Software development is my passion, as I've been involved in it since 2012.
 Currently, my main programming interest is **[Julia](https://julialang.org)**, a modern language for technical computing.
-You can see my own repositories and the repositories that I contributed to on **[GitHub](https://github.com/zdroid)**.
+You can see my work on **[GitHub](https://github.com/zdroid)**.
 
 Science is the other side of my coin.
 I've done several physics and astronomy projects in the **[Petnica Science Center](http://petnica.rs/)**.
-My proudest achievement is taking part in the 13th International Olympiad on Astronomy and Astrophysics, **[IOAA 2019](http://www.ioaa2019.hu/)**.
+My proudest achievement is taking part in the 13th International Olympiad on Astronomy and Astrophysics,
+**[IOAA 2019](http://www.ioaa2019.hu/)**.
 
 Being centered on one field only is far from good in my opinion.
 That's why my interests are as diverse as biology, history and politics.

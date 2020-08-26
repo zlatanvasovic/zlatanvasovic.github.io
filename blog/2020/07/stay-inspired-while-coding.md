@@ -1,7 +1,6 @@
 @def title = "Stay inspired while coding with Inspiration.jl"
 @def rss = "Clearing your mind after a bug appears can help you resolve it."
 @def rss_pubdate = Date(2020, 7, 4)
-@def published = "July 4, 2020"
 
 ## The problem
 

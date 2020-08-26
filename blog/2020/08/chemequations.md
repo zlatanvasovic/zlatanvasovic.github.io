@@ -1,7 +1,6 @@
 @def title = "New package: ChemEquations.jl"
 @def rss = "Write and balance chemical equations elegantly and efficiently."
 @def rss_pubdate = Date(2020, 8, 10)
-@def published = "August 10, 2020"
 
 There are already many tools for balancing chemical equations,
 such as [Balance Chemical Equation](https://www.webqc.org/balance.php) at webqc.org.

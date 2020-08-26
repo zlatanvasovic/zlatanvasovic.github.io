@@ -1,7 +1,6 @@
 @def title = "Make your Julia package in 10 minutes"
 @def rss = "Making a package can be a hassle, but in Julia it doesn't have to be so."
 @def rss_pubdate = Date(2020, 6, 13)
-@def published = "June 13, 2020"
 
 Making a package can be a hassle, but in Julia it doesn't have to be so.
 There are some great tools which can help you achieve this task in less than 10 minutes.

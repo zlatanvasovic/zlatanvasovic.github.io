@@ -1,7 +1,6 @@
 @def title = "Analyze mathematical functions interactively"
 @def rss = "An alternative way to do common math exercises."
 @def rss_pubdate = Date(2020, 6, 24)
-@def published = "June 24, 2020"
 
 Finding function's roots, derivatives, maxima and minima, and similar are common exercises in mathematics.
 For simple functions, it's easy to do it on paper.
