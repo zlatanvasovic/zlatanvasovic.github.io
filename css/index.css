@@ -2,7 +2,6 @@
  * In a healthy body, a healthy mind
  */
 
-
 body {
   padding-top: 2%;
   color: #000;
@@ -25,7 +24,8 @@ h1, h2, h3 {
 }
 
 h1[id] a,
-h2[id] a {
+h2[id] a,
+h3[id] a {
   color: #000;
 }
 
