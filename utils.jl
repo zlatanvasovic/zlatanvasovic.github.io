@@ -32,9 +32,11 @@ function hfun_blogposts()
                     ~~~
                     <div class="card border-dark mb-4">
                       <div class="card-body">
-                        <h4 class="card-title"><a href="$url">$title</a></h5>
+                        <h3 class="card-title">
+                            <a class="text-dark" href="$url">$title</a>
+                        </h3>
                         <p class="card-text">$rss</p>
-                        <p class="card-text"><small class="text-muted">$datetext</small></p>
+                        <p class="card-text text-muted">$datetext</p>
                       </div>
                     </div>
                     ~~~
