@@ -2,4 +2,4 @@
 
 User-agent: *
 Allow: /
-Sitemap: https://zdroid.github.io/sitemap.xml
+Sitemap: https://zlatanvasovic.github.io/sitemap.xml

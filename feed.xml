@@ -3,39 +3,39 @@
   <title>Zlatan's Journal</title>
   <description><![CDATA[An exploratory journey into interdisciplinary research.
 ]]></description>
-  <link>https://zdroid.github.io/</link>
-  <atom:link href="https://zdroid.github.io/feed.xml" rel="self" type="application/rss+xml" />
+  <link>https://zlatanvasovic.github.io/</link>
+  <atom:link href="https://zlatanvasovic.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>Stay inspired while coding with Inspiration.jl</title>
-    <link>https://zdroid.github.io/blog/2020/07/stay-inspired-while-coding/index.html</link>
+    <link>https://zlatanvasovic.github.io/blog/2020/07/stay-inspired-while-coding/index.html</link>
     <description><![CDATA[Clearing your mind after a bug appears can help you resolve it.
-<br><a href="https://zdroid.github.io/blog/2020/07/stay-inspired-while-coding/index.html">Read more</a>]]></description>
-    <guid>https://zdroid.github.io/blog/2020/07/stay-inspired-while-coding/index.html</guid>
+<br><a href="https://zlatanvasovic.github.io/blog/2020/07/stay-inspired-while-coding/index.html">Read more</a>]]></description>
+    <guid>https://zlatanvasovic.github.io/blog/2020/07/stay-inspired-while-coding/index.html</guid>
     <pubDate>Sat, 4 Jul 2020 00:00:00 UT</pubDate>
   </item>
   <item>
+    <title>Analyze mathematical functions interactively</title>
+    <link>https://zlatanvasovic.github.io/blog/2020/06/analyze-mathematical-functions-interactively/index.html</link>
+    <description><![CDATA[An alternative way to do common math exercises.
+<br><a href="https://zlatanvasovic.github.io/blog/2020/06/analyze-mathematical-functions-interactively/index.html">Read more</a>]]></description>
+    <guid>https://zlatanvasovic.github.io/blog/2020/06/analyze-mathematical-functions-interactively/index.html</guid>
+    <pubDate>Wed, 24 Jun 2020 00:00:00 UT</pubDate>
+  </item>
+  <item>
     <title>New package: ChemEquations.jl</title>
-    <link>https://zdroid.github.io/blog/2020/08/chemequations/index.html</link>
+    <link>https://zlatanvasovic.github.io/blog/2020/08/chemequations/index.html</link>
     <description><![CDATA[Write and balance chemical equations elegantly and efficiently.
-<br><a href="https://zdroid.github.io/blog/2020/08/chemequations/index.html">Read more</a>]]></description>
-    <guid>https://zdroid.github.io/blog/2020/08/chemequations/index.html</guid>
+<br><a href="https://zlatanvasovic.github.io/blog/2020/08/chemequations/index.html">Read more</a>]]></description>
+    <guid>https://zlatanvasovic.github.io/blog/2020/08/chemequations/index.html</guid>
     <pubDate>Mon, 10 Aug 2020 00:00:00 UT</pubDate>
   </item>
   <item>
     <title>Make your Julia package in 10 minutes</title>
-    <link>https://zdroid.github.io/blog/2020/06/make-your-julia-package/index.html</link>
+    <link>https://zlatanvasovic.github.io/blog/2020/06/make-your-julia-package/index.html</link>
     <description><![CDATA[Making a package can be a hassle, but in Julia it doesn&#39;t have to be so.
-<br><a href="https://zdroid.github.io/blog/2020/06/make-your-julia-package/index.html">Read more</a>]]></description>
-    <guid>https://zdroid.github.io/blog/2020/06/make-your-julia-package/index.html</guid>
+<br><a href="https://zlatanvasovic.github.io/blog/2020/06/make-your-julia-package/index.html">Read more</a>]]></description>
+    <guid>https://zlatanvasovic.github.io/blog/2020/06/make-your-julia-package/index.html</guid>
     <pubDate>Sat, 13 Jun 2020 00:00:00 UT</pubDate>
-  </item>
-  <item>
-    <title>Analyze mathematical functions interactively</title>
-    <link>https://zdroid.github.io/blog/2020/06/analyze-mathematical-functions-interactively/index.html</link>
-    <description><![CDATA[An alternative way to do common math exercises.
-<br><a href="https://zdroid.github.io/blog/2020/06/analyze-mathematical-functions-interactively/index.html">Read more</a>]]></description>
-    <guid>https://zdroid.github.io/blog/2020/06/analyze-mathematical-functions-interactively/index.html</guid>
-    <pubDate>Wed, 24 Jun 2020 00:00:00 UT</pubDate>
   </item>
 </channel>
 </rss>
