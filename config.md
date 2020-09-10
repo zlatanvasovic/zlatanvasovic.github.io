@@ -5,10 +5,10 @@ The website_* must be defined for the RSS to work
 -->
 @def website_title = "Zlatan's Journal"
 @def website_descr = "An exploratory journey into interdisciplinary research."
-@def website_url   = "https://zdroid.github.io"
+@def website_url   = "https://zlatanvasovic.github.io"
 
 @def author = "Zlatan Vasović"
-@def website_keywords = "zlatan, vasovic, zdroid, github, blog, developer, researcher"
+@def website_keywords = "zlatan, vasovic, zlatanvasovic, github, blog, developer, researcher"
 
 @def mintoclevel = 2
 

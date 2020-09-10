@@ -3,7 +3,7 @@
 I'm a young researcher and developer.
 Software development is my passion, as I've been involved in it since 2012.
 Currently, my main programming interest is **[Julia](https://julialang.org)**, a modern language for technical computing.
-You can see my work on **[GitHub](https://github.com/zdroid)**.
+You can see my work on **[GitHub](https://github.com/zlatanvasovic)**.
 
 Science is the other side of my coin.
 I've done several physics and astronomy projects in the **[Petnica Science Center](http://petnica.rs/)**.

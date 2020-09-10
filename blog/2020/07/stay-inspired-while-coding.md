@@ -23,7 +23,7 @@ Stacktrace:
 
 Download some inspiration:
 ```julia-repl
-(@v1.4) pkg> add https://github.com/zdroid/Inspiration.jl
+(@v1.4) pkg> add https://github.com/zlatanvasovic/Inspiration.jl
 ```
 
 Use it:
@@ -70,4 +70,4 @@ You can see all of them via `inspiring_quotes` array (also exported in `Inspirat
 Somebody with the know-how could append this message to error logs in Julia REPL,
 so that every time an error appears, an inspiring quote appears, too.
 Is there some way in which you think this idea can be improved?
-[Submit an issue](https://github.com/zdroid/Inspiration.jl/issues/new)!
+[Submit an issue](https://github.com/zlatanvasovic/Inspiration.jl/issues/new)!

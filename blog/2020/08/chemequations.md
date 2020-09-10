@@ -16,10 +16,10 @@ You can install the package by pressing `]` in Julia REPL and typing:
 add ChemEquations
 ```
 
-It's available on [GitHub](https://github.com/zdroid/ChemEquations.jl).
+It's available on [GitHub](https://github.com/zlatanvasovic/ChemEquations.jl).
 If you want to see the documentation, just click a button:
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://zdroid.github.io/ChemEquations.jl/stable/)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://zdroid.github.io/ChemEquations.jl/dev/).
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://zlatanvasovic.github.io/ChemEquations.jl/stable/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://zlatanvasovic.github.io/ChemEquations.jl/dev/).
 
 ## Textbook examples
 
@@ -218,4 +218,4 @@ And then the results are constructed into a `ChemEquation` with `balance` method
 - integration with [Catalyst.jl](https://github.com/SciML/Catalyst.jl) and
   [Latexify.jl](https://github.com/korsbo/Latexify.jl)
 
-Have any ideas? [Open an issue](https://github.com/zdroid/ChemEquations.jl/issues), or contact me directly!
+Have any ideas? [Open an issue](https://github.com/zlatanvasovic/ChemEquations.jl/issues), or contact me directly!
